@@ -1,0 +1,149 @@
+{
+  "currentlyReading": {
+    "title": "It`s okay, you will be fine",
+    "author": "Rizal Faoji ",
+    "cover": "assets/books/its-okay.jpg",
+    "progress": 50,
+    "status": "Reading"
+  },
+  "readingList": [
+    {
+      "title": "It`s okay, you will be fine",
+      "author": "Rizal Faoji",
+      "cover": "assets/books/its-okay.jpg",
+      "status": "Reading",
+      "progress": 50,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "10/10",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "Sastrajendra: Ilmu Kesempurnaan Jiwa",
+      "author": "Setyo Hajar Dewantoro",
+      "cover": "assets/books/sastrajendra-ilmu-kesempurnaan-jiwa.jpg",
+      "status": "Reading",
+      "progress": 65,
+      "reviews": {
+        "rohman": {
+          "rating": "9/10",
+          "comment": "Ajaran spiritual Nusantara kuno untuk menyempurnakan jiwa dan menaklukkan ego."
+        },
+        "margi": {
+          "rating": "10/10",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "Dompet Ayah Sepatu Ibu",
+      "author": "J.S. Khairen",
+      "cover": "assets/books/Dompet Ayah Sepatu Ibu.jpeg",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "Memberikan kesan semangat dalam memperjuangkan hidup apapun rintangannya"
+        },
+        "margi": {
+          "rating": "9/10",
+          "comment": "Ceritanya bikin nangis hampir sepanjang membaca, kisah perjuangan hidup yang begitu berat tapi berakhir manis"
+        }
+      }
+    },
+    {
+      "title": "Rose In The Rain",
+      "author": "Wahyu Sujani",
+      "cover": "assets/books/rose-in-the-rain.jpeg",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "8/10",
+          "comment": ""
+        }
+      }
+    },
+    {
+      "title": "Prinsipil Ekonomi",
+      "author": "Ferry Irwandi",
+      "cover": "assets/books/prinsipil_ekonomi.png",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "Mengenal dasar dari ekonomi dengan pemahaman yang lebih sederhana."
+        },
+        "margi": {
+          "rating": "8/10",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "Makanya, Mikir!",
+      "author": "Cania & Abigail",
+      "cover": "assets/books/makanya_mikir.png",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "Tentang kerangka berpikir dan pengambilan keputusan."
+        },
+        "margi": {
+          "rating": "9/10",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "From Zero to Survive",
+      "author": "Theo Derick",
+      "cover": "assets/books/from-zero-to-survive.jpg",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "Seni Menang Dalam Hidup dengan Realistis."
+        },
+        "margi": {
+          "rating": "9/10",
+          "comment": "belum komen"
+        }
+      }
+    }
+  ],
+  "targetList": [
+    {
+      "title": "My Youth",
+      "author": "Giantara Alam",
+      "cover": "assets/books/my-youth.jpg",
+      "status": "Unread",
+      "progress": 0,
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    }
+  ]
+}
