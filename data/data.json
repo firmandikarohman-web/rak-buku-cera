@@ -159,6 +159,40 @@
           "comment": "belum komen"
         }
       }
+    },
+    {
+      "title": "Technical Analysis for Mega Profit",
+      "author": "Edianto Ong",
+      "cover": "assets/books/Technical Analysis for Mega Profit.jpg",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "9/10",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "Japanese Candlestick Charting Techniques",
+      "author": "Steve Nison",
+      "cover": "assets/books/japanese candlestick.jpg",
+      "status": "Completed",
+      "progress": 100,
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "9/10",
+          "comment": "belum komen"
+        }
+      }
     }
   ],
   "targetList": [
