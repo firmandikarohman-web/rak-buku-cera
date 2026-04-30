@@ -212,6 +212,23 @@
           "comment": "belum komen"
         }
       }
+    },
+    {
+      "title": "Laut Bercerita",
+      "author": "Leila S. Chudori",
+      "cover": "assets/books/laut bercerita.jpg",
+      "status": "Unread",
+      "progress": 0,
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
     }
   ]
 }
