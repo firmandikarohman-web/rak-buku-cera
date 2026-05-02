@@ -297,6 +297,23 @@
           "comment": "belum komen"
         }
       }
+    },
+    {
+      "title": "Satine",
+      "author": "Ika Natassa",
+      "cover": "assets/books/satine.jpg",
+      "status": "Unread",
+      "progress": 0,
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
     }
   ]
 }
