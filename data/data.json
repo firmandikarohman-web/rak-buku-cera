@@ -1,9 +1,9 @@
 {
   "currentlyReading": {
-    "title": "It`s okay, you will be fine",
-    "author": "Rizal Faoji ",
-    "cover": "assets/books/its-okay.jpg",
-    "progress": 61,
+    "title": "My Youth",
+    "author": "Giantara Alam",
+    "cover": "assets/books/my-youth.jpg",
+    "progress": 1,
     "status": "Reading"
   },
   "readingList": [
@@ -28,12 +28,13 @@
       "title": "It`s okay, you will be fine",
       "author": "Rizal Faoji",
       "cover": "assets/books/its-okay.jpg",
-      "status": "Reading",
-      "progress": 61,
+      "status": "Completed",
+      "progress": 100,
       "reviews": {
         "rohman": {
           "rating": "10/10",
-          "comment": "belum komen"
+          "comment": "Buku yang mengingatkan tentang keadaan saat ini, ada kala kita senang atau merasa bersedih, atau mungkin kita sedang berada pada persimpangan jalan? Emm, Buku ini mengingatkan tentang rasa syukur itu. <br>
+          Terkadang ada faktor external yang ternyata bukan kendali kita, dan semoga kita bisa berdamai dengan keadaan."
         },
         "margi": {
           "rating": "10/10",
