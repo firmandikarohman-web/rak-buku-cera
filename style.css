@@ -991,6 +991,31 @@ main {
     line-height: 1.4;
 }
 
+/* ---------------- GALLERY ---------------- */
+.gallery-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s var(--trans-bezier), box-shadow 0.4s var(--trans-bezier);
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
 /* ---------------- FOOTER ---------------- */
 .glass-footer {
     text-align: center;
