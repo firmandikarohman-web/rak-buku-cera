@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Otomatisasi stagger delay berdasarkan posisi dalam grup
         if (el.parentElement.classList.contains('fluid-icons') ||
             el.parentElement.classList.contains('bento-grid') ||
-            el.parentElement.classList.contains('minimal-book-list')) {
+            el.parentElement.classList.contains('minimal-book-list') ||
+            el.parentElement.classList.contains('gallery-grid') ||
+            el.parentElement.classList.contains('bookshelf-grid')) {
             const index = Array.from(el.parentElement.children).indexOf(el);
             el.style.transitionDelay = `${index * 0.1}s`;
         }
@@ -266,8 +268,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             renderCurrentlyReading(data.currentlyReading);
             renderReadingList(data.readingList);
-            if(data.targetList) {
+            if (data.targetList) {
                 renderTargetList(data.targetList);
+            }
+            if (data.gallery) {
+                renderGallery(data.gallery);
             }
 
             // Re-initialize for new elements
@@ -296,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `;
-        
+
         // Trigger animation for this specific progress bar
         setTimeout(() => {
             const fill = container.querySelector('.cr-progress-fill');
@@ -355,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderTargetList = (books) => {
         const container = document.getElementById('target-list-container');
         if (!container || !books || books.length === 0) {
-            if(container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada buku dalam Target List.</p>';
+            if (container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada buku dalam Target List.</p>';
             return;
         }
 
@@ -412,6 +417,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const progressBars = container.querySelectorAll('.progress-fill');
         progressBars.forEach(bar => progressObserver.observe(bar));
+    };
+
+    const renderGallery = (galleryItems) => {
+        const container = document.getElementById('gallery-container');
+        if (!container || !galleryItems || galleryItems.length === 0) {
+            if(container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada foto di galeri.</p>';
+            return;
+        }
+
+        container.innerHTML = galleryItems.map((item) => {
+            return `
+            <div class="gallery-card reveal-stagger">
+                <img src="${item.image}" alt="${item.title}" class="gallery-img" onerror="this.src='https://via.placeholder.com/600x800?text=Gallery'">
+            </div>
+            `;
+        }).join('');
+
+        observeElements(container);
     };
 
     // Start fetching
