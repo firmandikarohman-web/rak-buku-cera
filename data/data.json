@@ -298,5 +298,31 @@
         }
       }
     }
+  ],
+  "gallery": [
+    {
+      "title": "Gallery Photo 1",
+      "image": "assets/gallery/photo1.jpeg"
+    },
+    {
+      "title": "Gallery Photo 2",
+      "image": "assets/gallery/photo2.jpeg"
+    },
+    {
+      "title": "Gallery Photo 3",
+      "image": "assets/gallery/photo3.jpeg"
+    },
+    {
+      "title": "Gallery Photo 4",
+      "image": "assets/gallery/photo4.jpeg"
+    },
+    {
+      "title": "Gallery Photo 5",
+      "image": "assets/gallery/photo5.jpeg"
+    },
+    {
+      "title": "Gallery Photo 6",
+      "image": "assets/gallery/photo6.jpeg"
+    }
   ]
 }
