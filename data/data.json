@@ -323,6 +323,50 @@
     {
       "title": "Gallery Photo 6",
       "image": "assets/gallery/photo6.jpeg"
+    },
+    {
+      "title": "Gallery Photo 7",
+      "image": "assets/gallery/7.jpg"
+    },
+    {
+      "title": "Gallery Photo 8",
+      "image": "assets/gallery/8.jpg"
+    },
+    {
+      "title": "Gallery Photo 9",
+      "image": "assets/gallery/9.jpg"
+    },
+    {
+      "title": "Gallery Photo 10",
+      "image": "assets/gallery/10.jpg"
+    },
+    {
+      "title": "Gallery Photo 11",
+      "image": "assets/gallery/11.jpg"
+    },
+    {
+      "title": "Gallery Photo 12",
+      "image": "assets/gallery/12.jpg"
+    },
+    {
+      "title": "Gallery Photo 13",
+      "image": "assets/gallery/13.jpg"
+    },
+    {
+      "title": "Gallery Photo 14",
+      "image": "assets/gallery/14.jpg"
+    },
+    {
+      "title": "Gallery Photo 15",
+      "image": "assets/gallery/15.jpg"
+    },
+    {
+      "title": "Gallery Photo 16",
+      "image": "assets/gallery/16.jpg"
+    },
+    {
+      "title": "Gallery Photo 17",
+      "image": "assets/gallery/17.jpg"
     }
   ]
 }
