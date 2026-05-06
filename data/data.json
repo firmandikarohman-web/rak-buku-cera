@@ -3,7 +3,7 @@
     "title": "My Youth",
     "author": "Giantara Alam",
     "cover": "assets/books/my-youth.jpg",
-    "progress": 1,
+    "progress": 6.6,
     "status": "Reading"
   },
   "readingList": [
@@ -12,7 +12,7 @@
       "author": "Giantara Alam",
       "cover": "assets/books/my-youth.jpg",
       "status": "Reading",
-      "progress": 1,
+      "progress": 6.6,
       "reviews": {
         "rohman": {
           "rating": "0/0",
