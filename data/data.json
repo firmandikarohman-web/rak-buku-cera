@@ -230,6 +230,23 @@
         }
       }
     },
+     {
+      "title": "Secrets of Divine Love;Edisi Bahasa Indonesia",
+      "author": "A. Helwa",
+      "cover": "assets/books/Secrets of Divine Love;Edisi Bahasa Indonesia.jpeg",
+      "status": "Unread",
+      "progress": 0,
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+     },
     {
       "title": "Rembulan Tenggelam di Wajahmu",
       "author": "Tere Liye",
