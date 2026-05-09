@@ -62,8 +62,13 @@
         <section id="home" class="hero section-scroll">
             <div class="hero-content">
                 <h1 class="reveal-stagger"><br>Selamat Datang di<br>Rak Buku Cera</h1>
-                <p class="tagline reveal-stagger">Merupakan '<b>Ruang Digital Personal</b>' yang terbuka untuk publik —sebuah tempat untuk mengarsipkan perjalanan membaca, menyimpan tulisan, serta mengabadikan momen lewat foto.<br><br>
-Disini, kamu diajak untuk melihat buku apa yang tengah kami selami, menyimak ulasan jujur dari buku-buku yang telah tuntas, hingga mengintip antrean bacaan kami berikutnya. Sempatkan juga mampir ke galeri visual kami di akhir halaman untuk sedikit melihat dokumentasi <i>random</i> kami.<br><br>Selamat Menjelajah!</p>
+                <p class="tagline reveal-stagger">Merupakan '<b>Ruang Digital Personal</b>' yang terbuka untuk publik
+                    —sebuah tempat untuk mengarsipkan perjalanan membaca, menyimpan tulisan, serta mengabadikan momen
+                    lewat foto.<br><br>
+                    Disini, kamu diajak untuk melihat buku apa yang tengah kami selami, menyimak ulasan jujur dari
+                    buku-buku yang telah tuntas, hingga mengintip antrean bacaan kami berikutnya. Sempatkan juga mampir
+                    ke galeri visual kami di akhir halaman untuk sedikit melihat dokumentasi <i>random</i>
+                    kami.<br><br>Selamat Menjelajah!</p>
             </div>
 
             <!-- Scroll Down Arrow -->
@@ -111,8 +116,16 @@ Disini, kamu diajak untuk melihat buku apa yang tengah kami selami, menyimak ula
             <div class="glass-card full-width-card">
                 <div class="about-content">
                     <div class="about-image-wrapper">
-                        <img src="assets/profile.png" alt="Rhopalocera" class="about-image"
-                            onerror="this.src='https://via.placeholder.com/400x400?text=Rhopalocera'">
+                        <div class="img-loading-wrapper is-loading"
+                            style="width: 100%; height: 100%; border-radius: inherit;">
+                            <div class="loading-icon-container">
+                                <i data-feather="smile"></i>
+                                <span class="loading-text">Memuat</span>
+                            </div>
+                            <img src="assets/profile.png" alt="Rhopalocera" class="about-image"
+                                onload="this.parentElement.classList.remove('is-loading')"
+                                onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/400x400?text=Rhopalocera'">
+                        </div>
                     </div>
                     <p class="about-narrative text-lead">
                         "Sesibuk apa pun hari yang terlewati, membaca buku adalah jeda yang selalu kami usahakan. Bagi
