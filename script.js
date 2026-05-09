@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let rafId;
 
     window.addEventListener('scroll', () => {
-        if (blobWrapper) {
+        if (blobWrapper && window.innerWidth > 768) {
             // Use requestAnimationFrame for smoother performance
             if (rafId) cancelAnimationFrame(rafId);
             rafId = requestAnimationFrame(() => {
@@ -47,13 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealElements = document.querySelectorAll('.reveal-stagger');
 
     const revealObserver = new IntersectionObserver((entries) => {
+        const isMobile = window.innerWidth <= 768;
+
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
             } else {
                 // Biarkan elemen "menjauh" (pudar) saat tidak terlihat
                 // Ini memberikan efek mengalir saat scrolling
-                entry.target.classList.remove('in-view');
+                if (isMobile) {
+                    const isCard = entry.target.tagName.toLowerCase() === 'div' ||
+                        entry.target.classList.contains('book-card-wrapper') ||
+                        entry.target.classList.contains('gallery-card');
+                    if (!isCard) {
+                        entry.target.classList.remove('in-view');
+                    }
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
             }
         });
     }, {
@@ -289,15 +300,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!container || !book) return;
 
         container.innerHTML = `
-            <div class="currently-reading-card">
-                <img src="${book.cover}" alt="${book.title}" class="cr-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
-                <div class="cr-info">
-                    <h4>${book.title}</h4>
-                    <p>${book.author}</p>
-                    <div class="cr-progress-container">
-                        <div class="cr-progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
+            <div class="currently-reading-wrapper" style="width: 100%; max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                <div class="currently-reading-card" style="margin: 0; max-width: 100%;">
+                    <img src="${book.cover}" alt="${book.title}" class="cr-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
+                    <div class="cr-info">
+                        <h4>${book.title}</h4>
+                        <p>${book.author}</p>
+                        <div class="cr-progress-container">
+                            <div class="cr-progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
+                        </div>
+                        <div class="cr-progress-text">${book.progress}% Selesai</div>
                     </div>
-                    <div class="cr-progress-text">${book.progress}% Selesai</div>
+                </div>
+                <div class="cr-sinopsis" style="padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); text-align: left;">
+                    <h5 style="margin-bottom: 8px; font-size: 0.95rem; color: var(--text-primary);">Sinopsis</h5>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); text-align: justify;">${book.sinopsis || "belum ada sinopsisnya"}</p>
                 </div>
             </div>
         `;
@@ -329,26 +346,40 @@ document.addEventListener("DOMContentLoaded", () => {
             ` : '';
 
             return `
-            <div class="book-card reveal-stagger">
-                <div class="book-card-header">
-                    <img src="${book.cover}" alt="${book.title}" class="book-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
-                    <div class="book-info">
-                        <h4>${book.title}</h4>
-                        <p class="book-author">${book.author}</p>
-                        <span class="book-status ${statusClass}">${book.status}</span>
-                    </div>
-                </div>
-                
-                <div class="progress-section">
-                    <div class="progress-container">
-                        <div class="progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
-                    </div>
-                    <div class="progress-text">${book.progress}%</div>
-                </div>
+            <div class="book-card-wrapper reveal-stagger">
+                <div class="book-card flip-enabled" onclick="this.classList.toggle('is-flipped')">
+                    <div class="book-card-front">
+                        <div class="book-card-header">
+                            <img src="${book.cover}" alt="${book.title}" class="book-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
+                            <div class="book-info">
+                                <h4>${book.title}</h4>
+                                <p class="book-author">${book.author}</p>
+                                <span class="book-status ${statusClass}">${book.status}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-section">
+                            <div class="progress-container">
+                                <div class="progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
+                            </div>
+                            <div class="progress-text">${book.progress}%</div>
+                        </div>
 
-                <div class="dual-review">
-                    ${rohmanReview}
-                    ${margiReview}
+                        <div class="dual-review">
+                            ${rohmanReview}
+                            ${margiReview}
+                        </div>
+                        <div style="margin-top: auto; padding-top: 10px; text-align: center; font-size: 0.75rem; color: var(--text-secondary); opacity: 0.6;">
+                            <i data-feather="repeat" style="width: 12px; height: 12px; vertical-align: middle;"></i> Klik untuk Sinopsis
+                        </div>
+                    </div>
+                    <div class="book-card-back">
+                        <h5 style="margin-bottom: 10px; font-size: 1rem; color: var(--text-primary); border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;">Sinopsis</h5>
+                        <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary); text-align: justify;">${book.sinopsis || "belum ada sinopsisnya"}</p>
+                        <div style="margin-top: auto; padding-top: 15px; text-align: center; font-size: 0.75rem; color: var(--text-secondary); opacity: 0.6;">
+                            <i data-feather="repeat" style="width: 12px; height: 12px; vertical-align: middle;"></i> Kembali
+                        </div>
+                    </div>
                 </div>
             </div>
             `;
@@ -380,26 +411,21 @@ document.addEventListener("DOMContentLoaded", () => {
             ` : '';
 
             return `
-            <div class="book-card reveal-stagger">
-                <div class="book-card-header">
-                    <img src="${book.cover}" alt="${book.title}" class="book-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
-                    <div class="book-info">
-                        <h4>${book.title}</h4>
-                        <p class="book-author">${book.author}</p>
-                        <span class="book-status ${statusClass}">${book.status}</span>
+            <div class="book-card-wrapper reveal-stagger">
+                <div class="book-card">
+                    <div class="book-card-header">
+                        <img src="${book.cover}" alt="${book.title}" class="book-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
+                        <div class="book-info">
+                            <h4>${book.title}</h4>
+                            <p class="book-author">${book.author}</p>
+                            <span class="book-status ${statusClass}">${book.status}</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="progress-section">
-                    <div class="progress-container">
-                        <div class="progress-fill" style="width: 0%" data-progress="${book.progress || 0}"></div>
-                    </div>
-                    <div class="progress-text">${book.progress || 0}%</div>
-                </div>
 
-                <div class="dual-review">
-                    ${rohmanReview}
-                    ${margiReview}
+                    <div class="book-sinopsis" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05);">
+                        <h5 style="margin-bottom: 5px; font-size: 0.85rem; color: var(--text-primary);">Sinopsis</h5>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary); text-align: justify;">${book.sinopsis || "belum ada sinopsisnya"}</p>
+                    </div>
                 </div>
             </div>
             `;
@@ -422,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderGallery = (galleryItems) => {
         const container = document.getElementById('gallery-container');
         if (!container || !galleryItems || galleryItems.length === 0) {
-            if(container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada foto di galeri.</p>';
+            if (container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada foto di galeri.</p>';
             return;
         }
 
