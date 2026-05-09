@@ -855,7 +855,52 @@ main {
     gap: 30px;
 }
 
+.book-card-wrapper {
+    perspective: 1000px;
+    height: 100%;
+}
+
 .book-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s var(--trans-bezier);
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 24px;
+}
+
+.book-card:not(.flip-enabled) {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.4s var(--trans-bezier), box-shadow 0.4s var(--trans-bezier);
+}
+
+.book-card:not(.flip-enabled):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.book-card.flip-enabled {
+    cursor: pointer;
+}
+
+.book-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.book-card-front, .book-card-back {
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -864,13 +909,45 @@ main {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    transition: transform 0.4s var(--trans-bezier), box-shadow 0.4s var(--trans-bezier);
+    transition: box-shadow 0.4s var(--trans-bezier);
 }
 
-.book-card:hover {
-    transform: translateY(-5px);
+.book-card.flip-enabled:hover .book-card-front,
+.book-card.flip-enabled:hover .book-card-back {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.book-card-front {
+    position: relative;
+    height: 100%;
+    gap: 16px;
+}
+
+.book-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
+
+.book-card-back::-webkit-scrollbar,
+.book-sinopsis-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.book-card-back::-webkit-scrollbar-track,
+.book-sinopsis-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.book-card-back::-webkit-scrollbar-thumb,
+.book-sinopsis-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .book-card-header {
