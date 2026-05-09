@@ -53,16 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
             } else {
-                // Biarkan elemen "menjauh" (pudar) saat tidak terlihat
-                // Ini memberikan efek mengalir saat scrolling
-                if (isMobile) {
-                    const isCard = entry.target.tagName.toLowerCase() === 'div' ||
-                        entry.target.classList.contains('book-card-wrapper') ||
-                        entry.target.classList.contains('gallery-card');
-                    if (!isCard) {
-                        entry.target.classList.remove('in-view');
-                    }
-                } else {
+                // Biarkan elemen tetap terlihat di ponsel setelah muncul pertama kali
+                // Ini mencegah glitch di mana h2 atau teks lain tertutup saat mengeklik card
+                if (!isMobile) {
                     entry.target.classList.remove('in-view');
                 }
             }
@@ -103,6 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         const heroElements = document.querySelectorAll('#home .reveal-stagger');
         heroElements.forEach(el => el.classList.add('in-view'));
+
+        if (window.innerWidth > 1024) {
+            const splitElements = document.querySelectorAll('.desktop-split .reveal-stagger');
+            splitElements.forEach(el => el.classList.add('in-view'));
+        } else {
+            const tagline = document.querySelectorAll('#home-desc .reveal-stagger');
+            tagline.forEach(el => el.classList.add('in-view'));
+        }
     }, 100);
 
 
