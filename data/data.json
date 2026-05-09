@@ -4,7 +4,8 @@
     "author": "Giantara Alam",
     "cover": "assets/books/my-youth.jpg",
     "progress": 6.6,
-    "status": "Reading"
+    "status": "Reading",
+    "sinopsis": "<b>My Youth</b>, Kali pertama bertemu Kala, tidak pernah ada di benak Clara bahwa mereka akan menjadi lebih dari sekadar teman diskusi. Clara hanya merasa senang berbicara dengan Kala, sebab laki-laki itu mendengar dan memberikan perhatian penuh. Kemudian, ia mendapati dirinya tetap merasa nyaman ketika hanya ada keheningan di antara mereka.<br><br>Hal ini menjadi sulit karena Clara tahu, ia terlalu rumit untuk dimengerti. Sekilas, ia terlihat seperti terbuka dengan sekitar, tapi sejatinya tengah menutup ruangan dalam dirinya. Ada terlalu banyak hal-hubungan yang tidak baik dengan ayahnya, kecanggungan dengan kedua kakaknya setelah kematian sang ibu, idealismenya akan apa yang benar dan adil, serta ketidakmampuannya untuk mengatakan apa ia rasa dan pikir.<br><br>Namun, dalam semua kesempatan yang mendekatkan Kala dan Clara pada dinding kampus, dan ketika dunia sekitar menjadi saksi perwujudan atas buku, pesta, dan kasih serta sayang untuk satu sama lain, Clara bertanya, 'apakah ini maksud kata-kata ibunya dalam surat yang ia tinggalkan? Apakah sekarang saat yang tepat untuk menjadi berani?'"
   },
   "readingList": [
     {
@@ -13,6 +14,7 @@
       "cover": "assets/books/my-youth.jpg",
       "status": "Reading",
       "progress": 6.6,
+      "sinopsis": "<b>My Youth</b>, Kali pertama bertemu Kala, tidak pernah ada di benak Clara bahwa mereka akan menjadi lebih dari sekadar teman diskusi. Clara hanya merasa senang berbicara dengan Kala, sebab laki-laki itu mendengar dan memberikan perhatian penuh. Kemudian, ia mendapati dirinya tetap merasa nyaman ketika hanya ada keheningan di antara mereka.<br><br>Hal ini menjadi sulit karena Clara tahu, ia terlalu rumit untuk dimengerti. Sekilas, ia terlihat seperti terbuka dengan sekitar, tapi sejatinya tengah menutup ruangan dalam dirinya. Ada terlalu banyak hal-hubungan yang tidak baik dengan ayahnya, kecanggungan dengan kedua kakaknya setelah kematian sang ibu, idealismenya akan apa yang benar dan adil, serta ketidakmampuannya untuk mengatakan apa ia rasa dan pikir.<br><br>Namun, dalam semua kesempatan yang mendekatkan Kala dan Clara pada dinding kampus, dan ketika dunia sekitar menjadi saksi perwujudan atas buku, pesta, dan kasih serta sayang untuk satu sama lain, Clara bertanya, 'apakah ini maksud kata-kata ibunya dalam surat yang ia tinggalkan? Apakah sekarang saat yang tepat untuk menjadi berani?'",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -30,6 +32,7 @@
       "cover": "assets/books/its-okay.jpg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -47,6 +50,7 @@
       "cover": "assets/books/sastrajendra-ilmu-kesempurnaan-jiwa.jpg",
       "status": "Reading",
       "progress": 65,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "9/10",
@@ -64,6 +68,7 @@
       "cover": "assets/books/Dompet Ayah Sepatu Ibu.jpeg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -81,6 +86,7 @@
       "cover": "assets/books/rose-in-the-rain.jpeg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -98,6 +104,7 @@
       "cover": "assets/books/be the new you.jpg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -115,6 +122,7 @@
       "cover": "assets/books/prinsipil_ekonomi.png",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -132,6 +140,7 @@
       "cover": "assets/books/makanya_mikir.png",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -149,6 +158,7 @@
       "cover": "assets/books/from-zero-to-survive.jpg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -166,6 +176,7 @@
       "cover": "assets/books/Technical Analysis for Mega Profit.jpg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -183,6 +194,7 @@
       "cover": "assets/books/japanese candlestick.jpg",
       "status": "Completed",
       "progress": 100,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "10/10",
@@ -202,6 +214,7 @@
       "cover": "assets/books/laut bercerita.jpg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "<b>Laut Bercerita</b>, novel terbaru Leila S. Chudori, bertutur tentang kisah keluarga yang kehilangan, sekumpulan sahabat yang merasakan kekosongan di dada, sekelompok orang yang gemar menyiksa dan lancar berkhianat, sejumlah keluarga yang mencari kejelasan makam anaknya, dan tentang cinta yang tak akan luntur.",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -219,6 +232,7 @@
       "cover": "assets/books/berani tidak disukai.jpg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -230,12 +244,13 @@
         }
       }
     },
-     {
+    {
       "title": "Secrets of Divine Love;Edisi Bahasa Indonesia",
       "author": "A. Helwa",
       "cover": "assets/books/Secrets of Divine Love;Edisi Bahasa Indonesia.jpeg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -246,13 +261,14 @@
           "comment": "belum komen"
         }
       }
-     },
+    },
     {
       "title": "Rembulan Tenggelam di Wajahmu",
       "author": "Tere Liye",
       "cover": "assets/books/rembulan tenggelam di wajahmu.jpg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -270,6 +286,7 @@
       "cover": "assets/books/brain based parenting.jpg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -287,6 +304,7 @@
       "cover": "assets/books/emotional intelligence.jpg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "0/0",
@@ -304,6 +322,7 @@
       "cover": "assets/books/satine.jpg",
       "status": "Unread",
       "progress": 0,
+      "sinopsis": "belum ada sinopsisnya",
       "reviews": {
         "rohman": {
           "rating": "0/0",
