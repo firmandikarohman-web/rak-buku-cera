@@ -257,10 +257,15 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.activities && data.activities.length > 0) {
                 new CarouselHandler('activities-list', data.activities, (act) => `
                     <div class="carousel-item">
-                        <div class="carousel-image-container">
+                        <div class="carousel-image-container img-loading-wrapper is-loading" style="display: flex;">
+                            <div class="loading-icon-container">
+                                <i data-feather="image"></i>
+                                <span class="loading-text">Memuat</span>
+                            </div>
                             <img src="${act.image || 'https://via.placeholder.com/400x225?text=Memory'}" 
                                  alt="${act.title}" class="carousel-image"
-                                 onerror="this.src='https://via.placeholder.com/400x225?text=Memory'">
+                                 onload="this.parentElement.classList.remove('is-loading')"
+                                 onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/400x225?text=Memory'">
                         </div>
                         <div class="carousel-info">
                             <p class="date">${act.date}</p>
@@ -302,7 +307,13 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = `
             <div class="currently-reading-wrapper" style="width: 100%; max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
                 <div class="currently-reading-card" style="margin: 0; max-width: 100%;">
-                    <img src="${book.cover}" alt="${book.title}" class="cr-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
+                    <div class="img-loading-wrapper is-loading" style="border-radius: 12px;">
+                        <div class="loading-icon-container">
+                            <i data-feather="book-open"></i>
+                            <span class="loading-text">Memuat</span>
+                        </div>
+                        <img src="${book.cover}" alt="${book.title}" class="cr-cover" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/150x210?text=Cover'">
+                    </div>
                     <div class="cr-info">
                         <h4>${book.title}</h4>
                         <p>${book.author}</p>
@@ -350,7 +361,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="book-card flip-enabled" onclick="this.classList.toggle('is-flipped')">
                     <div class="book-card-front">
                         <div class="book-card-header">
-                            <img src="${book.cover}" alt="${book.title}" class="book-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
+                            <div class="img-loading-wrapper is-loading" style="border-radius: 8px;">
+                                <div class="loading-icon-container">
+                                    <i data-feather="book-open"></i>
+                                </div>
+                                <img src="${book.cover}" alt="${book.title}" class="book-cover" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/150x210?text=Cover'">
+                            </div>
                             <div class="book-info">
                                 <h4>${book.title}</h4>
                                 <p class="book-author">${book.author}</p>
@@ -414,7 +430,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="book-card-wrapper reveal-stagger">
                 <div class="book-card">
                     <div class="book-card-header">
-                        <img src="${book.cover}" alt="${book.title}" class="book-cover" onerror="this.src='https://via.placeholder.com/150x210?text=Cover'">
+                        <div class="img-loading-wrapper is-loading" style="border-radius: 8px;">
+                            <div class="loading-icon-container">
+                                <i data-feather="book-open"></i>
+                            </div>
+                            <img src="${book.cover}" alt="${book.title}" class="book-cover" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/150x210?text=Cover'">
+                        </div>
                         <div class="book-info">
                             <h4>${book.title}</h4>
                             <p class="book-author">${book.author}</p>
@@ -455,7 +476,13 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = galleryItems.map((item) => {
             return `
             <div class="gallery-card reveal-stagger">
-                <img src="${item.image}" alt="${item.title}" class="gallery-img" onerror="this.src='https://via.placeholder.com/600x800?text=Gallery'">
+                <div class="img-loading-wrapper is-loading" style="width: 100%; height: 100%; border-radius: inherit;">
+                    <div class="loading-icon-container">
+                        <i data-feather="image"></i>
+                        <span class="loading-text">Memuat</span>
+                    </div>
+                    <img src="${item.image}" alt="${item.title}" class="gallery-img" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/600x800?text=Gallery'">
+                </div>
             </div>
             `;
         }).join('');
