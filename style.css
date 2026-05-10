@@ -265,8 +265,43 @@ main {
     font-family: 'Inter', sans-serif;
 }
 
+.thank-you-title {
+    font-family: 'Dancing Script', cursive !important;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin: 80px auto 40px;
+    background: linear-gradient(135deg, var(--text-primary) 30%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
 .mt-top {
     margin-top: 30px;
+}
+
+/* Responsive Thank You Image */
+.thankyou-image {
+    display: block;
+    /* Adjustable top margin via CSS variable */
+    margin-top: var(--thankyou-margin-top, -120px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .thankyou-image {
+        max-width: 90%;
+    }
 }
 
 /* ---------------- HERO SECTION ---------------- */
