@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuBtn.innerHTML = '<i data-feather="menu"></i>';
                 feather.replace();
             }
+
+            // Clear search when navigating so hidden sections reappear
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput && searchInput.value !== '') {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+            }
         });
     });
 
@@ -248,11 +255,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- 8. Dynamic Data Connection ---
+    let globalData = null;
     const fetchData = async () => {
         try {
             const response = await fetch('data/data.json');
             if (!response.ok) throw new Error('Failed to fetch data');
             const data = await response.json();
+            globalData = data;
 
             // Setup Activities Carousel (Memories)
             if (data.activities && data.activities.length > 0) {
@@ -342,8 +351,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById('reading-list-container');
         if (!container) return;
 
+        if (!books || books.length === 0) {
+            container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary); grid-column: 1 / -1; padding: 40px 0;">Yahh, belum ada di daftar bacaan</p>';
+            return;
+        }
+
         container.innerHTML = books.map((book, index) => {
-            const statusClass = book.status.toLowerCase() === 'completed' ? 'completed' : 'reading';
+            let statusClass = 'reading';
+            const stat = book.status.toLowerCase();
+            if (stat === 'completed') statusClass = 'completed';
+            else if (stat === 'unread' || stat === 'target') statusClass = 'target';
             const rohmanReview = book.reviews && book.reviews.rohman ? `
                 <div class="review-item">
                     <div class="reviewer-name">Rohman <span class="rating">${book.reviews.rohman.rating}</span></div>
@@ -444,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </div>
 
-                    <div class="book-sinopsis" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05);">
+                    <div class="book-sinopsis" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); flex: 1; overflow-y: auto;">
                         <h5 style="margin-bottom: 5px; font-size: 0.85rem; color: var(--text-primary);">Sinopsis</h5>
                         <p style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary); text-align: justify;">${book.sinopsis || "belum ada sinopsisnya"}</p>
                     </div>
@@ -493,5 +510,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start fetching
     fetchData();
+
+    // --- Search Functionality ---
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (!globalData) return;
+
+            const filterBooks = (books) => {
+                if (!books) return [];
+                return books.filter(book =>
+                    book.title.toLowerCase().includes(query) ||
+                    (book.author && book.author.toLowerCase().includes(query)) ||
+                    (book.sinopsis && book.sinopsis.toLowerCase().includes(query))
+                );
+            };
+
+            const isSearching = query.length > 0;
+            const sectionsToHide = ['home', 'about', 'gallery', 'contact'];
+
+            sectionsToHide.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = isSearching ? 'none' : '';
+            });
+
+            const desktopSplit = document.querySelector('.desktop-split');
+            if (desktopSplit) desktopSplit.style.display = isSearching ? 'none' : '';
+
+            const targetListSection = document.getElementById('target-list');
+            if (targetListSection) {
+                targetListSection.style.display = isSearching ? 'none' : '';
+            }
+
+            const readingListTitle = document.querySelector('#reading-list .section-title');
+            if (readingListTitle) {
+                readingListTitle.innerHTML = isSearching ? 'Hasil Pencarian' : 'Jejak Baca';
+            }
+
+            // Scroll to top of results if starting to search
+            if (isSearching && query.length === 1) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            if (isSearching) {
+                let combinedBooks = [];
+                if (globalData.readingList) combinedBooks.push(...globalData.readingList);
+                if (globalData.targetList) combinedBooks.push(...globalData.targetList);
+                renderReadingList(filterBooks(combinedBooks));
+            } else {
+                renderReadingList(globalData.readingList);
+                if (globalData.targetList) {
+                    renderTargetList(globalData.targetList);
+                }
+            }
+
+            feather.replace();
+
+            if (window.matchMedia("(pointer: fine)").matches) {
+                // Remove existing listener if any to avoid duplicates
+                const magneticElements = document.querySelectorAll('.magnetic, .magnetic-row');
+                magneticElements.forEach(elem => {
+                    elem.removeEventListener('mousemove', handleMagneticMove);
+                    elem.removeEventListener('mouseleave', handleMagneticLeave);
+                    elem.addEventListener('mousemove', handleMagneticMove);
+                    elem.addEventListener('mouseleave', handleMagneticLeave);
+                });
+            }
+        });
+    }
 
 });
