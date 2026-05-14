@@ -42,9 +42,17 @@
     <nav class="glass-nav sticky-nav">
         <div class="nav-content">
             <a href="#home" class="logo">Rhopalocera</a>
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <i data-feather="menu"></i>
-            </button>
+            
+            <div class="nav-actions">
+                <div class="search-capsule" onclick="document.getElementById('searchInput').focus()">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Cari buku..." class="search-input">
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            
             <ul class="nav-links">
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#currently-reading">Sedang Dibaca</a></li>
