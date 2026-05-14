@@ -273,6 +273,7 @@ main {
     font-size: clamp(3rem, 8vw, 5rem);
     margin: 80px auto 40px;
     background: linear-gradient(135deg, var(--text-primary) 30%, #000000 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -296,6 +297,7 @@ main {
     width: 100%;
     max-width: 600px;
     height: auto;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 @media (max-width: 768px) {
@@ -917,7 +919,7 @@ main {
 
 .book-card-wrapper {
     perspective: 1000px;
-    height: 100%;
+    height: 520px;
 }
 
 .book-card {
@@ -1106,6 +1108,26 @@ main {
     margin-top: 10px;
     padding-top: 16px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
+
+.dual-review::-webkit-scrollbar,
+.book-sinopsis::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dual-review::-webkit-scrollbar-track,
+.book-sinopsis::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dual-review::-webkit-scrollbar-thumb,
+.book-sinopsis::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .review-item {
@@ -1133,6 +1155,11 @@ main {
     color: var(--text-secondary);
     font-style: italic;
     line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* ---------------- GALLERY ---------------- */
@@ -1631,4 +1658,101 @@ main {
 
 .img-loading-wrapper.is-loading img {
     opacity: 0;
+}
+
+/* Search Capsule */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-capsule {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 6px 16px;
+    transition: all 0.3s ease;
+    cursor: text;
+}
+
+.search-capsule:focus-within {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--text-secondary);
+    margin-right: 8px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    width: 150px;
+    transition: width 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .search-capsule {
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .search-input {
+        width: 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    .search-capsule:focus-within .search-input,
+    .search-capsule.active .search-input {
+        width: 120px;
+        opacity: 1;
+        margin-left: 8px;
+    }
+
+    .search-capsule:focus-within,
+    .search-capsule.active {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .search-icon {
+        margin-right: 0;
+        width: 24px;
+        height: 24px;
+        color: var(--text-primary);
+    }
+}
+
+/* Hapus efek reveal di ponsel selain h1 */
+@media (max-width: 768px) {
+    .reveal-stagger:not(h1) {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        will-change: auto;
+    }
 }
