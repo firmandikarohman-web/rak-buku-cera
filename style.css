@@ -987,7 +987,9 @@ main {
 }
 
 .book-card-front {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     gap: 16px;
 }
@@ -1155,11 +1157,6 @@ main {
     color: var(--text-secondary);
     font-style: italic;
     line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 /* ---------------- GALLERY ---------------- */
@@ -1570,11 +1567,6 @@ main {
         flex-direction: column;
         gap: 16px;
         width: 100%;
-    }
-
-    .instagram-btn {
-        width: %;
-        justify-content: center;
     }
 }
 
