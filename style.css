@@ -169,13 +169,20 @@ p {
 
 .logo {
     text-decoration: none;
-    font-family: "Chronicle Display Bold", "Playfair Display", Georgia, serif;
-    font-style: normal;
-    color: var(--text-primary);
-    font-weight: 800;
-    font-size: 1.4rem;
-    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
     z-index: 102;
+}
+
+.logo-img {
+    height: 40px; /* ADJUST SIZE */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -1109,6 +1116,7 @@ main {
     gap: 12px;
     margin-top: 10px;
     padding-top: 16px;
+    padding-bottom: 16px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     flex: 1;
     overflow-y: auto;
