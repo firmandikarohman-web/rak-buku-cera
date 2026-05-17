@@ -35,9 +35,38 @@ html {
     text-size-adjust: 100%;
 }
 
+/*
+  BACKGROUND ELK FOREST — Teknik Universal (Desktop & Mobile)
+  Menggunakan html::before dengan position:fixed agar berfungsi
+  di semua browser termasuk iOS Safari yang tidak mendukung
+  background-attachment:fixed pada body.
+*/
+html::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background-image: url('assets/background-elk.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* Overlay tipis agar konten tetap terbaca di atas background */
+html::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: rgba(245, 240, 230, 0.30);
+    pointer-events: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-color);
+    background-color: transparent;
+    /* Background ditangani oleh html::before */
     color: var(--text-primary);
     overflow-x: hidden;
     line-height: 1.6;
@@ -71,7 +100,7 @@ p {
     line-height: 1.8;
 }
 
-/* Background Blobs Context & Parallax */
+/* Background Blobs Context & Parallax (di atas background image, sebagai color accent) */
 .blob-wrapper {
     position: fixed;
     top: 0;
@@ -80,9 +109,11 @@ p {
     height: 100vh;
     z-index: -1;
     overflow: hidden;
-    filter: blur(80px);
-    /* Slightly reduced blur for better visibility */
+    filter: blur(100px);
+    /* More blur to blend with background image */
     will-change: transform;
+    opacity: 0.35;
+    /* Reduced opacity to let background image show through */
 }
 
 .blob {
@@ -1761,5 +1792,26 @@ main {
         transform: none !important;
         transition: none !important;
         will-change: auto;
+    }
+}
+
+/* Background mobile fine-tuning */
+@media (max-width: 768px) {
+
+    /* Overlay sedikit lebih tebal di mobile agar teks lebih terbaca */
+    html::after {
+        background: rgba(245, 240, 230, 0.70);
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Posisi background fokus ke kiri sedikit di HP kecil */
+    html::before {
+        background-position: 60% center;
+    }
+
+    html::after {
+        background: rgba(245, 240, 230, 0.40);
     }
 }
