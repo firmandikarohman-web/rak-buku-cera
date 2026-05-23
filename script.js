@@ -185,12 +185,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 7. Dynamic Data Connection ---
     // --- 7. Reusable Carousel Handler ---
     class CarouselHandler {
-        constructor(containerId, data, renderItemFn) {
+        constructor(containerId, data, renderItemFn, autoSlideMs = 0) {
             this.container = document.getElementById(containerId);
             if (!this.container) return;
             this.wrapper = this.container.parentElement;
             this.data = data;
             this.renderItemFn = renderItemFn;
+            this.autoSlideMs = autoSlideMs;
             this.currentIndex = 0;
             this.interval = null;
             this.init();
@@ -198,9 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         init() {
             this.render();
-            this.startAutoSlide();
+            if (this.autoSlideMs > 0) {
+                this.startAutoSlide();
+                this.setupHoverPause();
+            }
             this.setupNavigation();
-            this.setupHoverPause();
         }
 
         render() {
@@ -210,7 +213,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         startAutoSlide() {
             if (this.interval) clearInterval(this.interval);
-            this.interval = setInterval(() => this.next(), 2000); // 2 seconds
+            if (this.autoSlideMs > 0) {
+                this.interval = setInterval(() => this.next(), this.autoSlideMs);
+            }
         }
 
         next() {
@@ -249,8 +254,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         setupHoverPause() {
-            this.wrapper.addEventListener('mouseenter', () => clearInterval(this.interval));
-            this.wrapper.addEventListener('mouseleave', () => this.startAutoSlide());
+            if (this.autoSlideMs > 0) {
+                this.wrapper.addEventListener('mouseenter', () => clearInterval(this.interval));
+                this.wrapper.addEventListener('mouseleave', () => this.startAutoSlide());
+            }
         }
     }
 
@@ -310,40 +317,83 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    const renderCurrentlyReading = (book) => {
+    const renderCurrentlyReading = (books) => {
         const container = document.getElementById('currently-reading-container');
-        if (!container || !book) return;
+        if (!container || !books) return;
 
-        container.innerHTML = `
-            <div class="currently-reading-wrapper" style="width: 100%; max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
-                <div class="currently-reading-card" style="margin: 0; max-width: 100%;">
-                    <div class="img-loading-wrapper is-loading" style="border-radius: 12px;">
-                        <div class="loading-icon-container">
-                            <i data-feather="book-open"></i>
-                            <span class="loading-text">Memuat</span>
-                        </div>
-                        <img src="${book.cover}" alt="${book.title}" class="cr-cover" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/150x210?text=Cover'">
+        const booksArray = Array.isArray(books) ? books : [books];
+        if (booksArray.length === 0) return;
+
+        if (booksArray.length > 1) {
+            container.innerHTML = `
+                <div class="carousel-wrapper cr-carousel">
+                    <div class="carousel-inner" id="cr-carousel-inner">
                     </div>
-                    <div class="cr-info">
-                        <h4>${book.title}</h4>
-                        <p>${book.author}</p>
-                        <div class="cr-progress-container">
-                            <div class="cr-progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
+                    <button class="nav-btn prev" aria-label="Previous"><i data-feather="chevron-left"></i></button>
+                    <button class="nav-btn next" aria-label="Next"><i data-feather="chevron-right"></i></button>
+                </div>
+            `;
+            new CarouselHandler('cr-carousel-inner', booksArray, (book) => `
+                <div class="carousel-item">
+                    <div class="currently-reading-wrapper" style="width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; padding: 0 10px;">
+                        <div class="currently-reading-card" style="margin: 0; max-width: 100%;">
+                            <div class="img-loading-wrapper is-loading" style="border-radius: 12px; flex-shrink: 0;">
+                                <div class="loading-icon-container">
+                                    <i data-feather="book-open"></i>
+                                    <span class="loading-text">Memuat</span>
+                                </div>
+                                <img src="${book.cover}" alt="${book.title}" class="cr-cover" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/150x210?text=Cover'">
+                            </div>
+                            <div class="cr-info">
+                                <h4>${book.title}</h4>
+                                <p>${book.author}</p>
+                                <div class="cr-progress-container">
+                                    <div class="cr-progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
+                                </div>
+                                <div class="cr-progress-text">${book.progress}% Selesai</div>
+                            </div>
                         </div>
-                        <div class="cr-progress-text">${book.progress}% Selesai</div>
+                        <div class="cr-sinopsis book-sinopsis" style="padding-top: 15px; padding-bottom: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); text-align: left; max-height: 370px; overflow-y: auto;">
+                            <h5 style="margin-bottom: 8px; font-size: 0.95rem; color: var(--text-primary);">Sinopsis</h5>
+                            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); text-align: justify; margin: 0;">${book.sinopsis || "belum ada sinopsisnya"}</p>
+                        </div>
                     </div>
                 </div>
-                <div class="cr-sinopsis" style="padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); text-align: left;">
-                    <h5 style="margin-bottom: 8px; font-size: 0.95rem; color: var(--text-primary);">Sinopsis</h5>
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); text-align: justify;">${book.sinopsis || "belum ada sinopsisnya"}</p>
+            `);
+        } else {
+            const book = booksArray[0];
+            container.innerHTML = `
+                <div class="currently-reading-wrapper" style="width: 100%; max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                    <div class="currently-reading-card" style="margin: 0; max-width: 100%;">
+                        <div class="img-loading-wrapper is-loading" style="border-radius: 12px; flex-shrink: 0;">
+                            <div class="loading-icon-container">
+                                <i data-feather="book-open"></i>
+                                <span class="loading-text">Memuat</span>
+                            </div>
+                            <img src="${book.cover}" alt="${book.title}" class="cr-cover" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/150x210?text=Cover'">
+                        </div>
+                        <div class="cr-info">
+                            <h4>${book.title}</h4>
+                            <p>${book.author}</p>
+                            <div class="cr-progress-container">
+                                <div class="cr-progress-fill" style="width: 0%" data-progress="${book.progress}"></div>
+                            </div>
+                            <div class="cr-progress-text">${book.progress}% Selesai</div>
+                        </div>
+                    </div>
+                    <div class="cr-sinopsis book-sinopsis" style="padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); text-align: left; max-height: 180px; overflow-y: auto;">
+                        <h5 style="margin-bottom: 8px; font-size: 0.95rem; color: var(--text-primary);">Sinopsis</h5>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); text-align: justify; margin: 0;">${book.sinopsis || "belum ada sinopsisnya"}</p>
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+            feather.replace();
+        }
 
-        // Trigger animation for this specific progress bar
+        // Trigger animation for ALL progress bars (including carousel slides)
         setTimeout(() => {
-            const fill = container.querySelector('.cr-progress-fill');
-            if (fill) progressObserver.observe(fill);
+            const fills = container.querySelectorAll('.cr-progress-fill');
+            fills.forEach(fill => progressObserver.observe(fill));
         }, 100);
     };
 
