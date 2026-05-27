@@ -464,55 +464,68 @@
   "gallery": [
     {
       "title": "Gallery Photo 1",
-      "image": "assets/gallery/photo1.jpeg"
+      "image": "assets/gallery/photo1.jpeg",
+      "senandika": "Melihatmu, membawaku mendekat buru-buru menghampiri. Menatapmu tumbuh dan mekar merekah membuat hatiku dipenuhi rasa senang dan syukur. Seketika kedua mataku berbinar. Begitu baiknya Tuhan, menghadirkanmu menghiasi dan mewarnai bumi tempatku hidup. "
     },
     {
       "title": "Gallery Photo 2",
-      "image": "assets/gallery/photo2.jpeg"
+      "image": "assets/gallery/photo2.jpeg",
+      "senandika": "Mawar, kau diciptakan dengan begitu presisi. Duri-duri di tangkaimu pun bukan lagi sebuah ancaman, melainkan tanda betapa Sang Pencipta begitu detail menjagamu. Memberimu pelindung alami agar keindahanmu tak sembarang dirusak. Agar manusia tahu dan menghargai arti keindahan. Bahwa di dunia ini, ada begitu banyak keindahan yang dapat dilihat dengan penuh rasa syukur. "
     },
     {
       "title": "Gallery Photo 3",
-      "image": "assets/gallery/photo3.jpeg"
+      "image": "assets/gallery/photo3.jpeg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 4",
-      "image": "assets/gallery/photo4.jpeg"
+      "image": "assets/gallery/photo4.jpeg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 5",
-      "image": "assets/gallery/photo5.jpeg"
+      "image": "assets/gallery/photo5.jpeg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 6",
-      "image": "assets/gallery/photo6.jpeg"
+      "image": "assets/gallery/photo6.jpeg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 9",
-      "image": "assets/gallery/9.jpg"
+      "image": "assets/gallery/9.jpg",
+      "senandika": "Haii Bulan, melihatmu, menatapmu, aku selalu penuh bahagia. Aku selalu penuh senyuman. Menghabiskan malam tanpa tidur hanya untuk menatapmu pun aku tak keberatan. Sesuka dan sebahagia itu melihatmu, mengabadikan keindahanmu. Dalam hatiku, terima kasih Tuhan, setiap malam sunyiku penuh dengan cahayanya yang menghangatkan. Terima kasih, Tuhan, kau hadirkan rasa bahagia setiap kali aku memandanginya."
     },
     {
       "title": "Gallery Photo 10",
-      "image": "assets/gallery/10.jpg"
+      "image": "assets/gallery/10.jpg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 11",
-      "image": "assets/gallery/11.jpg"
+      "image": "assets/gallery/11.jpg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 12",
-      "image": "assets/gallery/12.jpg"
+      "image": "assets/gallery/12.jpg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 13",
-      "image": "assets/gallery/13.jpg"
+      "image": "assets/gallery/13.jpg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 16",
-      "image": "assets/gallery/16.jpg"
+      "image": "assets/gallery/16.jpg",
+      "senandika": ""
     },
     {
       "title": "Gallery Photo 18",
-      "image": "assets/gallery/18.jpeg"
+      "image": "assets/gallery/18.jpeg",
+      "senandika": ""
     }
   ]
 }
