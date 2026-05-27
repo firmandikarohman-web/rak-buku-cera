@@ -543,13 +543,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.innerHTML = galleryItems.map((item) => {
             return `
-            <div class="gallery-card reveal-stagger">
-                <div class="img-loading-wrapper is-loading" style="width: 100%; height: 100%; border-radius: inherit;">
-                    <div class="loading-icon-container">
-                        <i data-feather="image"></i>
-                        <span class="loading-text">Memuat</span>
+            <div class="gallery-card-wrapper reveal-stagger">
+                <div class="gallery-card flip-enabled" onclick="this.classList.toggle('is-flipped')">
+                    <div class="gallery-card-front">
+                        <div class="img-loading-wrapper is-loading" style="width: 100%; height: 100%; border-radius: inherit;">
+                            <div class="loading-icon-container">
+                                <i data-feather="image"></i>
+                            </div>
+                            <img src="${item.image}" alt="${item.title}" class="gallery-img" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/600x800?text=Gallery'">
+                        </div>
+                        <div style="position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 0.75rem; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.8); z-index: 10;">
+                            <i data-feather="repeat" style="width: 12px; height: 12px; vertical-align: middle;"></i> Klik untuk Senandika
+                        </div>
                     </div>
-                    <img src="${item.image}" alt="${item.title}" class="gallery-img" onload="this.parentElement.classList.remove('is-loading')" onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/600x800?text=Gallery'">
+                    <div class="gallery-card-back">
+                        <h5 style="margin-bottom: 10px; font-size: 1rem; color: var(--text-primary); border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;">Senandika</h5>
+                        <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary); text-align: justify;">${item.senandika || "Belum ada senandika untuk foto ini."}</p>
+                        <div style="margin-top: auto; padding-top: 15px; text-align: center; font-size: 0.75rem; color: var(--text-secondary); opacity: 0.6;">
+                            <i data-feather="repeat" style="width: 12px; height: 12px; vertical-align: middle;"></i> Kembali
+                        </div>
+                    </div>
                 </div>
             </div>
             `;
