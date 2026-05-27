@@ -4,7 +4,7 @@
       "title": "My Youth",
       "author": "Giantara Alam",
       "cover": "assets/books/my-youth.jpg",
-      "progress": 33.3,
+      "progress": 41.1,
       "status": "Reading",
       "sinopsis": "<b>My Youth</b>, Kali pertama bertemu Kala, tidak pernah ada di benak Clara bahwa mereka akan menjadi lebih dari sekadar teman diskusi. Clara hanya merasa senang berbicara dengan Kala, sebab laki-laki itu mendengar dan memberikan perhatian penuh. Kemudian, ia mendapati dirinya tetap merasa nyaman ketika hanya ada keheningan di antara mereka.<br><br>Hal ini menjadi sulit karena Clara tahu, ia terlalu rumit untuk dimengerti. Sekilas, ia terlihat seperti terbuka dengan sekitar, tapi sejatinya tengah menutup ruangan dalam dirinya. Ada terlalu banyak hal-hubungan yang tidak baik dengan ayahnya, kecanggungan dengan kedua kakaknya setelah kematian sang ibu, idealismenya akan apa yang benar dan adil, serta ketidakmampuannya untuk mengatakan apa ia rasa dan pikir.<br><br>Namun, dalam semua kesempatan yang mendekatkan Kala dan Clara pada dinding kampus, dan ketika dunia sekitar menjadi saksi perwujudan atas buku, pesta, dan kasih serta sayang untuk satu sama lain, Clara bertanya, 'apakah ini maksud kata-kata ibunya dalam surat yang ia tinggalkan? Apakah sekarang saat yang tepat untuk menjadi berani?'"
     },
@@ -12,12 +12,38 @@
       "title": "The Principles Of Power",
       "author": "Dion Yulianto",
       "cover": "assets/books/the-principles-of-power.jpg",
-      "progress": 24.7,
+      "progress": 26.8,
       "status": "Reading",
       "sinopsis": "Menjadi sosok yang berkuasa dan berpengaruh adalah keinginan banyak orang. Manusia merasa tidak berdaya ketika mereka tidak memiliki kuasa sehingga mereka akan melakukan apa pun untuk mendapatkan kekuasaan, atau setidaknya menjadi orang yang berpengaruh dan disegani. Kehidupan sehari hari menunjukkan bahwa mereka yang memiliki posisi tinggi cenderung lebih mudah hidupnya. Orang-orang menghormati mereka. Mereka mendapatkan prioritas pertama, serta pelayanan yang jauh lebih istimewa. Siapa yang tidak ingin?<br><br>Kekuasaan memang terlalu menggoda untuk bisa ditolak. Sepanjang sejarah peradaban manusia, kita sudah membaca, melihat, mendengar, bahkan menyaksikan kekuasaan bergantian tumbuh dan jatuh. Intrik dan perebutan kekuasaan mewarnai hampir setiap pusat kekuasaan di seluruh dunia. Mulai dari istana kuno di Tiongkok dan Jepang, aula-aula megah di Romawi dan Yunani, gedung-gedung pemerintahan di Jerman dan London, istana-istana mewah di Prancis dan Italia, hingga padang rumput di Asia Tengah; semuanya menjadi saksi perebutan dan pergolakan kekuasaan.<br><br>Buku ini bukanlah sekadar bacaan biasa,melainkan sebuah panduan praktis untuk 'menguasai dan memanipulasi' orang lain dengan cara yang positif. Terdapat 33 kiat brilian di dalamnya yang akan membantu pembaca untuk membangun rasa hormat dari bawahan, mendapat perhatian dari atasan tanpa harus menjilat, dan bahkan bertahan dan meraih kesuksesan dalam persaingan yang ketat. Tidak hanya itu, buku ini juga mengajarkan bagaimana memanfaatkan musuh atau saingan agar menjadi sekutu yang mendukung kesuksesan kita.<br><br>Dengan gaya bahasa yang sederhana namun efektif, buku ini membahas garis besar hukum kekuasaan dan memberikan tips praktis yang dapat diterapkan dalam kehidupan sehari-hari. Ditambah dengan kalimat motivasi dari para tokoh terkenal dunia dan kisah-kisah inspiratif dari berbagai masa, buku ini akan menginspirasi pembaca untuk menjadi pribadi yang powerful dan mampu mengatasi setiap tantangan yang dihadapinya.<br><br>Setelah membaca buku ini, pembaca akan memiliki kemampuan untuk menguasai situasi dan menjadi sosok pribadi yang tak terkalahkan oleh orang lain maupun keadaan. Jangan lewatkan kesempatan untuk membaca buku ini dan mengubah hidupmu menjadi lebih baik! Siapkan dirimu untuk menjadi yang terbaik dengan mempelajari buku ini!"
+    },
+    {
+      "title": "Sastrajendra: Ilmu Kesempurnaan Jiwa",
+      "author": "Setyo Hajar Dewantoro",
+      "cover": "assets/books/sastrajendra-ilmu-kesempurnaan-jiwa.jpg",
+      "progress": 65,
+      "status": "Reading",
+      "sinopsis": "Sastrajendra Hayuningrat Pangruwating Diyu sering dianggap sebagai ilmu kuno rahasia yang tak boleh diajarkan secara bebas. Namun penulis buku ini justru mengajak sebanyak mungkin orang untuk mempelajarinya atas dasar kesadaran bahwa leluhur Nusantara mampu mencapai puncak kejayaan ketika menguasai Sastrajendra.<br><br>Sastrajendra yang diwedarkan Resi Wisrawa kepada Dewi Sukesi ribuan tahun silam adalah puncak ajaran spiritual yang mengungkap rahasia jiwa dan jagat raya sekaligus cara untuk menyempurnakan jiwa hingga mampu kembali kepada Sangkan Paraning Dumadi: Tuhan. Ia yang menguasai Sastrajendra adalah manusia sejati yang sanggup hamemayu hayuning bawana ambrasta dur angkara (memperindah jagat raya dan memberantas angkara murka) sebagaimana wejangan Eyang Semar pamomong tanah Jawa<br><br>Namun demikian Sastrajendra hanya bisa dikuasai oleh pribadi yang telah bertekad kuat untuk meruwat jiwa-raganya dari diyu (watak angkara murka) dan terhubung dengan Guru Sejati atau Sang Dewa Ruci yang bertakhta di pusat hati. Ketika seseorang telah terhubung dengan Guru Sejati ia akan mampu mendayagunakan rasa sejati sebagai perangkat kecerdasan utama di dalam diri sehingga memiliki kuasa untuk memulihkan Ibu Pertiwi yang tengah terluka oleh anak-anaknya sendiri."
     }
   ],
   "readingList": [
+    {
+      "title": "The Principles Of Power",
+      "author": "Dion Yulianto",
+      "cover": "assets/books/the-principles-of-power.jpg",
+      "status": "Unread",
+      "progress": 0,
+      "sinopsis": "Menjadi sosok yang berkuasa dan berpengaruh adalah keinginan banyak orang. Manusia merasa tidak berdaya ketika mereka tidak memiliki kuasa sehingga mereka akan melakukan apa pun untuk mendapatkan kekuasaan, atau setidaknya menjadi orang yang berpengaruh dan disegani. Kehidupan sehari hari menunjukkan bahwa mereka yang memiliki posisi tinggi cenderung lebih mudah hidupnya. Orang-orang menghormati mereka. Mereka mendapatkan prioritas pertama, serta pelayanan yang jauh lebih istimewa. Siapa yang tidak ingin?<br><br>Kekuasaan memang terlalu menggoda untuk bisa ditolak. Sepanjang sejarah peradaban manusia, kita sudah membaca, melihat, mendengar, bahkan menyaksikan kekuasaan bergantian tumbuh dan jatuh. Intrik dan perebutan kekuasaan mewarnai hampir setiap pusat kekuasaan di seluruh dunia. Mulai dari istana kuno di Tiongkok dan Jepang, aula-aula megah di Romawi dan Yunani, gedung-gedung pemerintahan di Jerman dan London, istana-istana mewah di Prancis dan Italia, hingga padang rumput di Asia Tengah; semuanya menjadi saksi perebutan dan pergolakan kekuasaan.<br><br>Buku ini bukanlah sekadar bacaan biasa,melainkan sebuah panduan praktis untuk 'menguasai dan memanipulasi' orang lain dengan cara yang positif. Terdapat 33 kiat brilian di dalamnya yang akan membantu pembaca untuk membangun rasa hormat dari bawahan, mendapat perhatian dari atasan tanpa harus menjilat, dan bahkan bertahan dan meraih kesuksesan dalam persaingan yang ketat. Tidak hanya itu, buku ini juga mengajarkan bagaimana memanfaatkan musuh atau saingan agar menjadi sekutu yang mendukung kesuksesan kita.<br><br>Dengan gaya bahasa yang sederhana namun efektif, buku ini membahas garis besar hukum kekuasaan dan memberikan tips praktis yang dapat diterapkan dalam kehidupan sehari-hari. Ditambah dengan kalimat motivasi dari para tokoh terkenal dunia dan kisah-kisah inspiratif dari berbagai masa, buku ini akan menginspirasi pembaca untuk menjadi pribadi yang powerful dan mampu mengatasi setiap tantangan yang dihadapinya.<br><br>Setelah membaca buku ini, pembaca akan memiliki kemampuan untuk menguasai situasi dan menjadi sosok pribadi yang tak terkalahkan oleh orang lain maupun keadaan. Jangan lewatkan kesempatan untuk membaca buku ini dan mengubah hidupmu menjadi lebih baik! Siapkan dirimu untuk menjadi yang terbaik dengan mempelajari buku ini!",
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
     {
       "title": "My Youth",
       "author": "Giantara Alam",
@@ -405,24 +431,6 @@
       "status": "Unread",
       "progress": 0,
       "sinopsis": "Broken Strings adalah memoar tentang kontrol, keheningan, dan keberanian untuk bersuara. Sebuah kisah personal mengenai tubuh dan suara yang lama diarahkan oleh orang lain, hingga kesadaran membuka jalan menuju pelepasan dan kebebasan yang dimiliki sendiri.<br><br>Aurélie Alida Marie Moeremans adalah penulis dan aktris yang lahir di Belgia dan besar di Indonesia. Melalui Broken Strings, memoar pertamanya, ia berbagi kisah personal untuk meningkatkan kesadaran tentang grooming, kekerasan emosional, dan relasi yang tidak sehat, sekaligus mendorong keberanian untuk bersuara, mengenali batas, dan melindungi diri.",
-      "reviews": {
-        "rohman": {
-          "rating": "0/0",
-          "comment": "belum komen"
-        },
-        "margi": {
-          "rating": "0/0",
-          "comment": "belum komen"
-        }
-      }
-    },
-    {
-      "title": "The Principles Of Power",
-      "author": "Dion Yulianto",
-      "cover": "assets/books/the-principles-of-power.jpg",
-      "status": "Unread",
-      "progress": 0,
-      "sinopsis": "Menjadi sosok yang berkuasa dan berpengaruh adalah keinginan banyak orang. Manusia merasa tidak berdaya ketika mereka tidak memiliki kuasa sehingga mereka akan melakukan apa pun untuk mendapatkan kekuasaan, atau setidaknya menjadi orang yang berpengaruh dan disegani. Kehidupan sehari hari menunjukkan bahwa mereka yang memiliki posisi tinggi cenderung lebih mudah hidupnya. Orang-orang menghormati mereka. Mereka mendapatkan prioritas pertama, serta pelayanan yang jauh lebih istimewa. Siapa yang tidak ingin?<br><br>Kekuasaan memang terlalu menggoda untuk bisa ditolak. Sepanjang sejarah peradaban manusia, kita sudah membaca, melihat, mendengar, bahkan menyaksikan kekuasaan bergantian tumbuh dan jatuh. Intrik dan perebutan kekuasaan mewarnai hampir setiap pusat kekuasaan di seluruh dunia. Mulai dari istana kuno di Tiongkok dan Jepang, aula-aula megah di Romawi dan Yunani, gedung-gedung pemerintahan di Jerman dan London, istana-istana mewah di Prancis dan Italia, hingga padang rumput di Asia Tengah; semuanya menjadi saksi perebutan dan pergolakan kekuasaan.<br><br>Buku ini bukanlah sekadar bacaan biasa,melainkan sebuah panduan praktis untuk 'menguasai dan memanipulasi' orang lain dengan cara yang positif. Terdapat 33 kiat brilian di dalamnya yang akan membantu pembaca untuk membangun rasa hormat dari bawahan, mendapat perhatian dari atasan tanpa harus menjilat, dan bahkan bertahan dan meraih kesuksesan dalam persaingan yang ketat. Tidak hanya itu, buku ini juga mengajarkan bagaimana memanfaatkan musuh atau saingan agar menjadi sekutu yang mendukung kesuksesan kita.<br><br>Dengan gaya bahasa yang sederhana namun efektif, buku ini membahas garis besar hukum kekuasaan dan memberikan tips praktis yang dapat diterapkan dalam kehidupan sehari-hari. Ditambah dengan kalimat motivasi dari para tokoh terkenal dunia dan kisah-kisah inspiratif dari berbagai masa, buku ini akan menginspirasi pembaca untuk menjadi pribadi yang powerful dan mampu mengatasi setiap tantangan yang dihadapinya.<br><br>Setelah membaca buku ini, pembaca akan memiliki kemampuan untuk menguasai situasi dan menjadi sosok pribadi yang tak terkalahkan oleh orang lain maupun keadaan. Jangan lewatkan kesempatan untuk membaca buku ini dan mengubah hidupmu menjadi lebih baik! Siapkan dirimu untuk menjadi yang terbaik dengan mempelajari buku ini!",
       "reviews": {
         "rohman": {
           "rating": "0/0",
