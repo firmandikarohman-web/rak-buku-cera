@@ -541,7 +541,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        container.innerHTML = galleryItems.map((item) => {
+        container.innerHTML = [...galleryItems].reverse().map((item) => {
             return `
             <div class="gallery-card-wrapper reveal-stagger">
                 <div class="gallery-card flip-enabled" onclick="this.classList.toggle('is-flipped')">
