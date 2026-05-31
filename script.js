@@ -534,14 +534,19 @@ document.addEventListener("DOMContentLoaded", () => {
         progressBars.forEach(bar => progressObserver.observe(bar));
     };
 
-    const renderGallery = (galleryItems) => {
+    const renderGallery = (galleryItems, expanded = false) => {
         const container = document.getElementById('gallery-container');
         if (!container || !galleryItems || galleryItems.length === 0) {
             if (container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada foto di galeri.</p>';
             return;
         }
 
-        container.innerHTML = [...galleryItems].reverse().map((item) => {
+        let itemsToRender = [...galleryItems].reverse();
+        if (!expanded && itemsToRender.length > 5) {
+            itemsToRender = itemsToRender.slice(0, 5);
+        }
+
+        let html = itemsToRender.map((item) => {
             return `
             <div class="gallery-card-wrapper reveal-stagger">
                 <div class="gallery-card flip-enabled" onclick="this.classList.toggle('is-flipped')">
@@ -567,6 +572,46 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             `;
         }).join('');
+
+        if (galleryItems.length > 5) {
+            if (!expanded) {
+                html += `
+                <div class="gallery-card-wrapper reveal-stagger" id="show-more-gallery-btn" style="cursor: pointer;">
+                    <div class="gallery-card" style="display: flex; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+                        <h4 style="color: var(--text-primary); font-size: 1.1rem; margin: 0;">Tampilkan Semua Gambar</h4>
+                    </div>
+                </div>
+                `;
+            } else {
+                html += `
+                <div class="gallery-card-wrapper reveal-stagger" id="show-less-gallery-btn" style="cursor: pointer;">
+                    <div class="gallery-card" style="display: flex; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+                        <h4 style="color: var(--text-primary); font-size: 1.1rem; margin: 0;">Tampilkan Sedikit Gambar</h4>
+                    </div>
+                </div>
+                `;
+            }
+        }
+
+        container.innerHTML = html;
+
+        const showMoreBtn = document.getElementById('show-more-gallery-btn');
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', () => {
+                renderGallery(galleryItems, true);
+                if (window.feather) window.feather.replace();
+            });
+        }
+
+        const showLessBtn = document.getElementById('show-less-gallery-btn');
+        if (showLessBtn) {
+            showLessBtn.addEventListener('click', () => {
+                renderGallery(galleryItems, false);
+                if (window.feather) window.feather.replace();
+                const gallerySection = document.getElementById('gallery');
+                if (gallerySection) gallerySection.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
 
         observeElements(container);
     };
