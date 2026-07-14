@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rak Buku Cera - Blog">
+    <title>Uji Coba Tulisan | Rak Buku Cera</title>
+    <link rel="icon" type="image/jpeg" href="../../assets/favicon.jpeg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .blog-meta {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .share-btn {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 8px 20px;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(40px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 50px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .blog-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .blog-content h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: rgba(17, 17, 17, 0.9);
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 0.95rem;
+            transition: visibility 0s, opacity 0.5s ease;
+            opacity: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content {
+                padding: 30px 20px;
+            }
+
+            .blog-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Parallax Blobs Context -->
+    <div class="blob-wrapper" id="blobWrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <!-- Sticky Navigation -->
+    <nav class="glass-nav sticky-nav">
+        <div class="nav-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/logo-rhopalocera.png" alt="Rhopalocera" class="logo-img">
+            </a>
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#home">Beranda</a></li>
+                <li><a href="../../index.html#currently-reading">Sedang Dibaca</a></li>
+                <li><a href="../../index.html#reading-list">Jejak Baca</a></li>
+                <li><a href="../../index.html#target-list">Antrean Baca</a></li>
+                <li><a href="../../index.html#about">Kisah Cera</a></li>
+                <li><a href="../../index.html#gallery">Galeri</a></li>
+                <li><a href="../../index.html#blog">Blog</a></li>
+                <li><a href="../../index.html#contact">Sapa Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main style="padding-top: 150px;">
+        <section class="section">
+            <div class="blog-header reveal-stagger in-view">
+                <h1 class="blog-title">Uji Coba Tulisan</h1>
+                <div class="blog-meta">14 Juli 2026 | Rohman Firmandika</div>
+                <button class="share-btn magnetic" onclick="copyLink()">
+                    <i data-feather="link" style="width: 16px; height: 16px;"></i> Link copied
+                </button>
+            </div>
+            <article class="blog-content reveal-stagger in-view">
+                <p>Mudik kali ini terasa jauh lebih istimewa. Alasannya sederhana, namun cukup membuatku terus
+                    tersenyum: ada Margi yang menemani perjalananku.</p>
+                <p>Semuanya bermula pada tanggal 4 Juli. Hari itu, aku menyempatkan diri mampir ke tempat Mas untuk
+                    mengambil buku sekaligus berpamitan. Tanggal 10 hingga 12 Juli nanti, aku berencana pulang kampung.
+                    Mengingat waktu yang serba mepet, segala persiapan telah kumatangkan jauh-jauh hari—mulai dari
+                    memetakan rute, menyusun anggaran, barang bawaan, hingga memastikan fisikku siap untuk perjalanan
+                    ini.</p>
+
+                <h3>Jumat, 10 Juli 2026</h3>
+                <p>Pagi itu terasa menjanjikan. Tas ranselku sudah terisi rapi dengan pakaian yang kucuci beberapa hari
+                    sebelumnya. Selesai berkemas dan mandi, aku berangkat kerja dengan satu doa yang terus kurapalkan
+                    dalam hati: "Semoga hari ini pekerjaanku selesai tepat waktu, agar aku tak perlu berlarian mengejar
+                    kereta."</p>
+                <p>Dan benar saja, waktu seolah berlari. Tahu-tahu senja sudah menyapa. Begitu urusan kantor beres, aku
+                    segera berganti pakaian, menyandang ransel, dan bergegas menuju tempat motorku terparkir. Aku memang
+                    sengaja memarkirnya di dalam gedung agar lebih hemat waktu. Meski harus sedikit merogoh kocek lebih
+                    dalam.</p>
+                <p>Langit malam mulai menyelimuti ibu kota saat aku memindahkan parkir motorku ke area parkir yang lebih
+                    aman jika aku meninggalkan motorku dalam beberapa hari kedepan. Sekitar pukul setengah delapan
+                    malam. Dari sana, langkahku berlanjut menuju halte. Bus Transjakarta membawaku membelah keramaian
+                    menuju Monas, sebelum akhirnya aku transit dan melanjutkan perjalanan menuju Stasiun Pasar Senen.
+                </p>
+                <div style="margin: 40px 0; text-align: center;">
+                    <img src="../../assets/thankyou.png" alt="Thank You"
+                        style="max-width: 100%; width: 500px; height: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
+                </div>
+                <p>Di Senen, aku masih punya waktu luang sekitar dua jam. Teringat pesan Ibu yang selalu mewanti-wanti
+                    agar perut tak kosong sebelum bepergian, aku menyusuri lorong-lorong stasiun hingga menemukan kedai
+                    ayam goreng. Di tengah suapan makan malamku, aku menghubungi Margi. Ada pemandangan kecil yang
+                    menghangatkan hati malam itu; seorang anak kecil duduk anteng di sebelahku, seolah menemukan
+                    kenyamanan di dekat orang asing ini.</p>
+                <p>Pukul sebelas malam, antrean panjang menyambutku di pintu masuk peron. Begitu berhasil masuk dan
+                    menemukan kursi di dalam gerbong, rasa lelah langsung mengambil alih. Aku terlelap begitu saja,
+                    bahkan tak sadar kapan penumpang di sebelahku datang dan duduk. Barulah saat suara peringatan
+                    keberangkatan menggema dan kereta mulai berderak maju, mataku sempat terbuka sesaat.</p>
+                <p>Sepanjang malam, tidurku tak sepenuhnya pulas. Sesekali aku terbangun setiap kali pengumuman stasiun
+                    pemberhentian terdengar. Di saat-saat seperti itu, iseng kucek detak jantungku. "Ah, syukurlah,
+                    masih rendah," batinku tersenyum kecil, lalu kembali memejamkan mata.</p>
+                <p>Menjelang subuh, aku terbangun. Pria di sebelahku masih tertidur pulas. Tak tega rasanya membangunkan
+                    dia, jadi aku hanya bisa berpasrah dalam hati, berharap kereta segera tiba di tujuan sebelum fajar
+                    menyingsing agar aku tak terlewat waktu Subuh.</p>
+
+                <h3>Sabtu, 11 Juli 2026</h3>
+                <p>Kereta akhirnya merayap memasuki Stasiun Tawang saat jam menunjukkan pukul setengah enam pagi.
+                    Antrean toilet ternyata mengular panjang. Sedikit menahan rasa ingin buang air, aku memutuskan untuk
+                    berwudu terlebih dahulu dan menunaikan kewajiban Subuhku.</p>
+                <p>Niat hati ingin membeli Roti'O sebagai pengganjal perut, tapi sayang, aku sudah telanjur keluar dari
+                    gerbang stasiun dan sang petugas keamanan tak mengizinkanku masuk kembali. Aku sempat mencoba
+                    memesan lewat pintu belakang, tapi petugas di sana menolak dengan halus. "Mau pergantian shift, Kak.
+                    Kalau berkenan, nunggu sampai jam setengah tujuh, ya." Aku mengangguk pasrah dan membatalkan niatku.
+                </p>
+                <p>Langkahku kemudian membawaku menyusuri jalanan Kota Lama Semarang yang lengang di pagi hari.
+                    Mengandalkan ulasan di internet, mataku tertuju pada sebuah kafe dengan rating memuaskan: Arah
+                    Coffee. Aku masuk dan memesan croissant cokelat dan keju, menyempatkan diri ke toilet selagi
+                    menunggu pesanan disiapkan.</p>
+                <p>Dengan perut yang lumayan terisi, aku berjalan menuju halte BRT. Di dekat sana, aku menghampiri
+                    seorang pedagang makanan. "Halte Jurnatan masih biasa dipakai orang naik-turun bus nggak,
+                    Kak?"<br>"Sepertinya masih," jawabnya.<br>Aku hanya membatin geli mendengar jawaban 'sepertinya'
+                    itu. Setelah menunggu dan melihat tiga bus berlalu tanpa henti, lambaian tanganku akhirnya berhasil
+                    membuat satu bus menepi. Perjalanan menuju Ungaran pun dimulai.</p>
+                <p>Pukul 07.40, aku turun di halte Ungaran. Saat aku tengah membuka tas, pandanganku tanpa sengaja
+                    tertuju ke seberang jalan. Ada Margi di sana. Rasa bahagia seketika membuncah. Aku menyeberang,
+                    menyapanya, dan kami berjabat tangan. Setelah menyempatkan diri menggosok gigi di toilet dan
+                    mengunyah permen karet, kami melangkah bersama menuju Soto Ayam Cipto Roso.</p>
+                <p>Meski antreannya cukup ramai, semuanya sepadan. Porsinya memang mungil—mangkuknya saja kecil—tapi
+                    cukup membuatku kalap menghabiskan tiga tusuk sate dan satu gorengan. Selesai sarapan, kami kembali
+                    berjalan sejauh setengah kilometer untuk mencari bus menuju Solo.</p>
+                <p>"Sepertinya kalau di daerah sini banyak CCTV, deh. Petugas dapur tu orang-orang sini" celetuk Margi
+                    tiba-tiba. Kami tertawa ringan, menikmati percakapan santai di sepanjang jalan. Tak lama setelah aku
+                    mengeluh belum melihat bus yang lewat, sebuah Bus Safari Po muncul dari kejauhan. Kami pun naik dan
+                    duduk berdampingan.</p>
+                <p>Sepanjang perjalanan di dalam bus, obrolan kami tak henti mengalir. Di momen itulah Margi memberikan
+                    sebuah karya yang ia buat sendiri: sulaman namaku. Di atas namaku tertera gambar bulan, dan di
+                    bawahnya terdapat sebuah jangkar.</p>
+                <p>"Ini keren banget, Margi. Aku suka," pujiku tulus.<br>Margi tersenyum lembut. "Ketemu kamu kan nggak
+                    bisa tiap hari. Aku udah bilang sama diriku sendiri, aku mau bikin ini karena aku senang.
+                    Ngerjainnya nggak mau tertekan, sebisanya, seselesainya. Alhamdulillah selesai pelan-pelan, sabar,
+                    dan nggak ngeluh."<br>"Sweet sekali," balasku, merasakan kehangatan yang perlahan menjalar di dada.
+                </p>
+                <p>Kami tiba di Terminal Tirtonadi pukul setengah dua belas siang. Setelah Margi dari toilet dan aku
+                    membeli air mineral, kami memutuskan mencari makan siang via Ojek Online menuju Gudeg Ayu Solo. Di
+                    tengah perjalanan, pandangan kami tersita oleh kemegahan Masjid Raya Sheikh Zayed.<br>"Kalau habis
+                    makan kita mampir ke masjid itu, gimana?" tawar Margi.<br>"Wah, boleh banget," jawabku antusias.</p>
+                <p>Sepiring Nasi Gudeg Ayam Telur Tahu menjadi santap siangku, sementara Margi memilih versi tanpa
+                    telur. Sambil makan, kami juga menikmati es krim yang kami pilih setibanya di tempat Gudeg. Rasa
+                    gudegnya lezat, meski menurutku bumbunya sedikit terlalu pekat di lidah.</p>
+                <p>Selesai makan, kami kembali menuju masjid yang memikat hati kami tadi. Setibanya di sana pukul satu
+                    siang, kami terpesona. Bagian dalamnya sungguh mengagumkan. Setelah menunaikan salat dan berpisah
+                    sejenak, kami kembali bertemu. Kulihat Margi sedang asyik merekam video. Tanpa aba-aba, aku
+                    memotretnya. Ia tersenyum manis, sebuah lengkungan senyum yang kini tersimpan aman di galeriku.</p>
+                <p>Aku menghampirinya. "Margi, kamu cantik banget. Sini, aku fotoin lagi," pintaku. Ia mengangguk
+                    tersipu. "Kamu cantik banget, Margii" Kami pun menyempatkan diri berfoto bersama di pelataran masjid
+                    sebelum akhirnya kembali ke Terminal Tirtonadi.</p>
+                <p>Di terminal, kami celingukan mencari bus Aneka Jaya. Hampir satu jam kami menunggu dalam
+                    ketidakpastian. Tiba-tiba terdengar teriakan sang agen, "Pacitan! Baturetno! Pacitan!"<br>Aku
+                    mencari-cari sumber suara. Busnya di mana? Sempat kukira bus Eka yang akan berangkat. Ternyata bus
+                    Aneka Jaya terhalang dari pandangan kami. Aku nekat menghampiri pria yang berteriak tadi, dan tepat
+                    saat itu, mataku menangkap badan bus yang sudah mulai bergerak.</p>
+                <p>Dengan sigap aku melambaikan tangan, berlari kecil agar sang sopir menahan remnya. Margi menyusul di
+                    belakangku. Aku mempersilakannya naik lebih dulu, lalu kami memilih bangku deretan kiri. Duduk
+                    berdampingan lagi, perjalanan menuju Pacitan terasa begitu singkat karena diisi dengan tawa dan
+                    obrolan panjang. Sebelum bus sampai di Donorojo, aku sempat meminta Margi untuk membeli bunga agar
+                    bisa ia rawat di Semarang nanti.</p>
+                <p>Pukul setengah tujuh malam, bus berhenti di Donorojo. Perjalanan kami hari itu harus dijeda. Bapakku
+                    sudah menunggu untuk menjemput, begitu pula kerabat Margi.</p>
+                <p>Hari sudah berganti malam. Pukul 18.40, aku melangkahkan kaki memasuki rumah. Rindu seketika luruh
+                    saat aku menyalami dan memeluk Bapak, Ibu, Simbah, dan Kafa—anak tetangga yang sudah akrab
+                    denganku.<br>"Kafa nungguin dari siang tadi, katanya kalau sore Om Rohman udah datang mau diajak
+                    main layangan," ujar Ibu. Aku menatap Kafa dengan perasaan bersalah. Langit sudah gelap, jadi kami
+                    harus menunda rencana itu.</p>
+                <p>Setelah berganti pakaian, suara Ibu dari dapur mengalihkan perhatianku. "Ibu buatkan soto,
+                    lho."<br>Mataku berbinar. "Wah, makanan kesukaanku!"<br>Soto hangat buatan Ibu, dinikmati
+                    bersama-sama di dapur yang sederhana, rasanya mengalahkan hidangan apa pun. Selesai makan, aku
+                    mengajak Kafa keluar membeli jajan. Aku membeli martabak, sementara Kafa memilih permen karet karena
+                    ingin diajari cara meniup gelembung.</p>
+                <p>Malam berlanjut dengan kedatangan dua tamu Bapak. Seperti kebiasaan lama, aku dihujani pertanyaan
+                    seputar perjalananku. Aku menjawabnya dengan sopan, merangkai obrolan yang hangat. Pukul delapan
+                    malam, rasa lelah akhirnya tak bisa lagi diajak kompromi. Kafa yang ikut terlelap bersamaku di kasur
+                    menjadi penutup hari yang panjang itu.</p>
+
+                <h3>Minggu, 12 Juli 2026</h3>
+                <p>Udara pagi membangunkanku pukul setengah lima subuh. Aku bergegas mandi, meski harus diselingi drama
+                    kecil meminta Ibu mengambilkan handuk. Di dapur, Ibu sudah sibuk menggoreng tahu. Aroma gurihnya
+                    menggoda. Alih-alih menunggu disajikan, aku, Bapak, dan Simbah justru mencicipi tahu yang baru
+                    matang, kami pun menikmati tahu itu bersama-sama. Selesai salat, barulah aku menyantap sarapan
+                    sesungguhnya: nasi, sayur tahu, dan lauk tahu. Sederhana, namun terasa sangat nikmat.</p>
+                <p>Pagi itu, Ibu mengajakku berbelanja ke minimarket. Kami membeli minyak, gula, teh, roti, jajanan
+                    untuk Kafa, dan tak lupa mencari parfum incaran Ibu. Aku menyodorkan beberapa tester hingga pilihan
+                    Ibu jatuh pada Morris Romance. Di antrean kasir, mataku tak sengaja melihat jepit rambut berbentuk
+                    kupu-kupu yang lucu. Aku memfotonya dan mengirimkannya pada Margi.</p>
+                <p>Sebelum pulang, kami mampir membeli gorengan, yang langsung ludes kami nikmati bersama setibanya di
+                    rumah. Namun, waktu tak bisa dihentikan. Saatnya bersiap kembali ke Jakarta.<br>"Jangan sampai
+                    telat, mending sampai sana lebih dulu," pesan Ibu.<br>Tepat pukul 08.45, setelah berpamitan dengan
+                    semua orang, aku melangkah keluar rumah.</p>
+                <p>Aku menunggu bus di "Pojok". Di sana ada Bu Sri, penjual gorengan yang biasa kubeli jajanannya saat
+                    aku masih SD dulu. Sembari menunggu bus yang kata beliau baru akan lewat satu jam lagi, kami
+                    tenggelam dalam nostalgia. Bu Sri bercerita tentang masa mudanya di Cikarang, tak jauh dari
+                    Mekarsari—tempat yang sangat familier bagiku. Obrolan itu membuat waktu menunggu tak terasa
+                    membosankan.</p>
+                <p>Pukul 09.45, suara klakson bus terdengar. Aku menjabat tangan Bapak untuk terakhir kalinya, lalu naik
+                    ke dalam bus. Begitu duduk, refleks pertamaku adalah menelepon Margi. Panggilanku diangkat, bahkan
+                    wajah ibunya sempat masuk ke dalam frame kamera. Sayangnya, baru saja aku hendak berpamitan, sinyal
+                    ponselku hilang.</p>
+                <p>Di dalam bus, meski terpaan cahaya matahari dari jendela terasa sedikit panas, hawa dingin dari AC
+                    perlahan membuai ke alam mimpi. Aku baru tersadar saat bus memasuki kawasan Solo Balapan. Aku mampir
+                    sejenak ke musala Terminal Tirtonadi untuk menunaikan salat Zuhur, sekaligus mengabari Margi.</p>
+                <p>Pukul satu siang, ojek online menurunkanku di Stasiun Jebres. Mengingat keretaku baru berangkat pukul
+                    14.25, aku menyempatkan diri mencari makan di foodcourt pasar seberang stasiun. Pesanan kwetiauku
+                    memakan waktu cukup lama, hingga aku harus memakannya dengan terburu-buru walau masih mengepul
+                    panas. Tepat pukul 14.15 aku sudah kembali masuk ke stasiun. Sepuluh menit kemudian, kereta perlahan
+                    melaju meninggalkan Solo.</p>
+                <p>Di dalam gerbong, aku memberi kabar pada Margi. Ia menyuruhku beristirahat, namun entah mengapa
+                    tanganku lebih ingin merangkai kata demi kata—mengubah perjalananku menjadi jurnal ini. Walau pada
+                    akhirnya, kantuk tetap saja datang.</p>
+                <p>Tempat dudukku berdekatan dengan gerbong makan dan musala. Selesai menunaikan salat Magrib sekitar
+                    pukul 18.15, aku memesan seporsi nasi sei sapi. Tak lupa, ku-update Margi lagi. Niat hati ingin
+                    berwudu untuk salat Isya, tapi sayangnya air di toilet sedang kosong. Aku pun memutuskan untuk
+                    menundanya hingga tiba di Jakarta.</p>
+                <p>"Kayaknya aku bakal tidur jam sembilan malam ini," pesanku pada Margi. Dan benar saja, di jam
+                    tersebut, mataku terpejam sempurna.</p>
+                <p>Aku terjaga pukul sebelas malam, menyadari stasiun tujuan sudah dekat. Kereta akhirnya merapat di
+                    Stasiun Pasar Senen pada pukul 23.30. Aku segera mencari musala untuk salat Isya dan menghubungi
+                    Margi.<br>"Di mana?" tanyanya.<br>"Lagi di musala." Aku lalu memberitahunya bahwa aku akan menginap
+                    di Bobopod Juanda malam itu.</p>
+                <p>Selesai berdoa, aku memesan ojek menuju hotel. Setibanya di sana, aku langsung check-in. Sebelum
+                    terlelap pada pukul 00.15, aku merenung sejenak. Perjalanan mudik yang singkat ini rasanya begitu
+                    berkesan dan selalu berhasil membuatku tersenyum.</p>
+
+                <h3>Senin, 13 Juli 2026</h3>
+                <p>Adzan subuh berkumandang saat mataku kembali terbuka. Setelah rutinitas pagi—mengabari Margi, mandi,
+                    dan bersiap kerja—aku pun check-out.</p>
+                <p>Di seberang hotel, Stasiun Juanda berdiri berdampingan dengan halte Transjakarta. Jembatan
+                    penyeberangannya sudah mulai ramai oleh mobilitas warga ibu kota yang bersiap memulai rutinitas. Aku
+                    melangkah naik ke halte, menaiki bus Transjakarta 10H. Laju bus membelah pagi hingga akhirnya
+                    menurunkanku di Bundaran Senayan sekitar pukul 06.50.</p>
+                <p>Akhir pekan telah usai, namun memori manis dari perjalanan ini akan selalu kusimpan dengan rapi.</p>
+            </article>
+        </section>
+        <footer class="glass-footer" style="margin-top: 60px;">
+            <p>&copy; 2026 Rak Buku Cera | Dwi Margi Astuti x Rohman Firmandika</p>
+        </footer>
+    </main>
+    <!-- Toast Notification -->
+    <div id="toast">Link copied!</div>
+    <script>
+        feather.replace();
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.getElementById("toast");
+                toast.className = "show";
+                setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+            });
+        }
+
+        // Blobs Parallax
+        const blobWrapper = document.getElementById('blobWrapper');
+        window.addEventListener('scroll', () => {
+            if (blobWrapper && window.innerWidth > 768) {
+                const scrolled = window.scrollY;
+                blobWrapper.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+
+        // Mobile Menu
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinksContainer = document.querySelector('.nav-links');
+        if (menuBtn && navLinksContainer) {
+            menuBtn.addEventListener('click', () => {
+                navLinksContainer.classList.toggle('active');
+                if (navLinksContainer.classList.contains('active')) {
+                    menuBtn.innerHTML = '<i data-feather="x"></i>';
+                } else {
+                    menuBtn.innerHTML = '<i data-feather="menu"></i>';
+                }
+                feather.replace();
+            });
+        }
+
+        // Magnetic Effect
+        if (window.matchMedia("(pointer: fine)").matches) {
+            const btns = document.querySelectorAll('.magnetic');
+            btns.forEach(btn => {
+                btn.addEventListener('mousemove', function (e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const deltaX = (x - centerX) * 0.1;
+                    const deltaY = (y - centerY) * 0.1;
+                    this.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+                });
+                btn.addEventListener('mouseleave', function () {
+                    this.style.transform = ``;
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
