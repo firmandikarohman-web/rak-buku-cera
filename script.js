@@ -307,6 +307,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.gallery) {
                 renderGallery(data.gallery);
             }
+            if (data.blog) {
+                renderBlog(data.blog);
+            }
 
             // Re-initialize for new elements
             feather.replace();
@@ -532,6 +535,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const progressBars = container.querySelectorAll('.progress-fill');
         progressBars.forEach(bar => progressObserver.observe(bar));
+    };
+
+    const renderBlog = (blogs) => {
+        const container = document.getElementById('blog-container');
+        if (!container || !blogs || blogs.length === 0) {
+            if (container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada tulisan blog.</p>';
+            return;
+        }
+
+        container.innerHTML = blogs.map((blog) => {
+            return `
+            <div class="book-card-wrapper reveal-stagger" style="aspect-ratio: 3 / 4; height: auto;">
+                <div class="book-card" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="${blog.image}" alt="${blog.title}" style="width: 100%; height: 50%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x400?text=Blog'">
+                    <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; height: 50%;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-primary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${blog.title}</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px; text-align: justify; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">${blog.excerpt}</p>
+                        <a href="${blog.link}" style="margin-top: auto; color: #EC4899; font-weight: bold; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px;">
+                            Baca selengkapnya <i data-feather="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            `;
+        }).join('');
+
+        observeElements(container);
     };
 
     const renderGallery = (galleryItems, expanded = false) => {
