@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rak Buku Cera - Blog">
     <title>Nyeritain Perjalanan Mudikku | Rak Buku Cera</title>
-    <link rel="icon" type="image/jpeg" href="../../assets/favicon.jpeg">
+    <link rel="icon" type="image/jpeg" href="../assets/favicon.jpeg">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         .blog-header {
             text-align: center;
@@ -128,8 +128,8 @@
     <!-- Sticky Navigation -->
     <nav class="glass-nav sticky-nav">
         <div class="nav-content">
-            <a href="../../index.html" class="logo">
-                <img src="../../assets/logo-rhopalocera.png" alt="Rhopalocera" class="logo-img">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo-rhopalocera.png" alt="Rhopalocera" class="logo-img">
             </a>
             <div class="nav-actions">
                 <button class="mobile-menu-btn" aria-label="Toggle Menu">
@@ -137,14 +137,14 @@
                 </button>
             </div>
             <ul class="nav-links">
-                <li><a href="../../index.html#home">Beranda</a></li>
-                <li><a href="../../index.html#currently-reading">Sedang Dibaca</a></li>
-                <li><a href="../../index.html#reading-list">Jejak Baca</a></li>
-                <li><a href="../../index.html#target-list">Antrean Baca</a></li>
-                <li><a href="../../index.html#about">Kisah Cera</a></li>
-                <li><a href="../../index.html#gallery">Galeri</a></li>
-                <li><a href="../../index.html#blog">Blog</a></li>
-                <li><a href="../../index.html#contact">Sapa Kami</a></li>
+                <li><a href="../index.html#home">Beranda</a></li>
+                <li><a href="../index.html#currently-reading">Sedang Dibaca</a></li>
+                <li><a href="../index.html#reading-list">Jejak Baca</a></li>
+                <li><a href="../index.html#target-list">Antrean Baca</a></li>
+                <li><a href="../index.html#about">Kisah Cera</a></li>
+                <li><a href="../index.html#gallery">Galeri</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#contact">Sapa Kami</a></li>
             </ul>
         </div>
     </nav>
@@ -229,7 +229,7 @@
                     sebuah karya yang ia buat sendiri: sulaman namaku. Di atas namaku tertera gambar bulan, dan di
                     bawahnya terdapat sebuah jangkar.</p>
                 <div style="margin: 40px 0; text-align: center;">
-                    <img src="../../blog/gallery/sulaman.jpeg" alt="Sulaman"
+                    <img src="gallery/sulaman.jpeg" alt="Sulaman"
                         style="max-width: 100%; width: 500px; height: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
                 </div>
                 <p>"Ini keren banget, Margi. Aku suka," pujiku tulus.<br>Margi tersenyum lembut. "Ketemu kamu kan nggak
@@ -249,7 +249,7 @@
                     sejenak, kami kembali bertemu. Kulihat Margi sedang asyik merekam video. Tanpa aba-aba, aku
                     memotretnya. Ia tersenyum manis, sebuah lengkungan senyum yang kini tersimpan aman di galeriku.</p>
                 <div style="margin: 40px 0; text-align: center;">
-                    <img src="../../blog/gallery/margi.jpeg" alt="Margi"
+                    <img src="gallery/margi.jpeg" alt="Margi"
                         style="max-width: 100%; width: 500px; height: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
                 </div>
                 <p>Aku menghampirinya. "Margi, kamu cantik banget. Sini, aku fotoin lagi," pintaku. Ia mengangguk
@@ -314,7 +314,7 @@
                     panas. Tepat pukul 14.15 aku sudah kembali masuk ke stasiun. Sepuluh menit kemudian, kereta perlahan
                     melaju meninggalkan Solo.</p>
                 <div style="margin: 40px 0; text-align: center;">
-                    <img src="../../blog/gallery/jebres.jpeg" alt="Stasiun Jebres"
+                    <img src="gallery/jebres.jpeg" alt="Stasiun Jebres"
                         style="max-width: 100%; width: 500px; height: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
                 </div>
                 <p>Di dalam gerbong, aku memberi kabar pada Margi. Ia menyuruhku beristirahat, namun entah mengapa
@@ -342,7 +342,7 @@
                     melangkah naik ke halte, menaiki bus Transjakarta 10H. Laju bus membelah pagi hingga akhirnya
                     menurunkanku di Bundaran Senayan sekitar pukul 06.50.</p>
                 <div style="margin: 40px 0; text-align: center;">
-                    <img src="../../blog/gallery/senayan.jpeg" alt="Bundaran Senayan"
+                    <img src="gallery/senayan.jpeg" alt="Bundaran Senayan"
                         style="max-width: 100%; width: 500px; height: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
                 </div>
                 <p>Akhir pekan telah usai, namun memori manis dari perjalanan ini akan selalu kusimpan dengan rapi.</p>
@@ -387,6 +387,18 @@
                 feather.replace();
             });
         }
+        
+        // Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal-stagger');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
 
         // Magnetic Effect
         if (window.matchMedia("(pointer: fine)").matches) {
