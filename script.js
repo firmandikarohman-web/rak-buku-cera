@@ -546,7 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.innerHTML = blogs.map((blog) => {
             return `
-            <div class="book-card-wrapper reveal-stagger" style="aspect-ratio: 3 / 4; height: auto;">
+            <div class="book-card-wrapper reveal-stagger" style="aspect-ratio: 3 / 5; height: auto;">
                 <div class="book-card" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                     <img src="${blog.image}" alt="${blog.title}" style="width: 100%; height: 50%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x400?text=Blog'">
                     <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; height: 50%;">
