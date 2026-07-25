@@ -310,6 +310,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.blog) {
                 renderBlog(data.blog);
             }
+            if (data.games) {
+                renderGames(data.games);
+            }
 
             // Re-initialize for new elements
             feather.replace();
@@ -564,6 +567,33 @@ document.addEventListener("DOMContentLoaded", () => {
         observeElements(container);
     };
 
+    const renderGames = (games) => {
+        const container = document.getElementById('game-container');
+        if (!container || !games || games.length === 0) {
+            if (container) container.innerHTML = '<p style="text-align:center; width:100%; color:var(--text-secondary);">Belum ada permainan.</p>';
+            return;
+        }
+
+        container.innerHTML = games.map((game) => {
+            return `
+            <div class="book-card-wrapper reveal-stagger" style="aspect-ratio: 3 / 5; height: auto;">
+                <div class="book-card" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="${game.image}" alt="${game.title}" style="width: 100%; height: 50%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x400?text=Game'">
+                    <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; height: 50%;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-primary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${game.title}</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px; text-align: justify; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">${game.excerpt}</p>
+                        <a href="${game.link}" style="margin-top: auto; color: #10B981; font-weight: bold; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px;">
+                            Mainkan <i data-feather="play" style="width: 16px; height: 16px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            `;
+        }).join('');
+
+        observeElements(container);
+    };
+
     const renderGallery = (galleryItems, expanded = false) => {
         const container = document.getElementById('gallery-container');
         if (!container || !galleryItems || galleryItems.length === 0) {
@@ -666,7 +696,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             const isSearching = query.length > 0;
-            const sectionsToHide = ['home', 'about', 'gallery', 'contact'];
+            const sectionsToHide = ['home', 'about', 'games', 'gallery', 'blog', 'contact'];
 
             sectionsToHide.forEach(id => {
                 const el = document.getElementById(id);
