@@ -601,5 +601,13 @@
       "excerpt": "Mudik kali ini terasa jauh lebih istimewa. Alasannya sederhana, namun cukup membuatku terus tersenyum: ada Margi yang menemani perjalananku...",
       "link": "blog/nyeritain-perjalanan-mudikku.html"
     }
+  ],
+  "games": [
+    {
+      "title": "Petualangan Kupu-Kupu: Taman Nektar",
+      "image": "games/gallery/taman-nektar.jpeg",
+      "excerpt": "Bantu Cera si Kupu-kupu mengumpulkan nektar sebanyak-banyaknya di taman yang indah! Hati-hati dengan lebah yang sedang berjaga agar kamu tidak tersengat.",
+      "link": "games/taman_nektar.html"
+    }
   ]
 }
