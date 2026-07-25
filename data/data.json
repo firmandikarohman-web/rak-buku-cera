@@ -23,9 +23,35 @@
       "progress": 65,
       "status": "Reading",
       "sinopsis": "Sastrajendra Hayuningrat Pangruwating Diyu sering dianggap sebagai ilmu kuno rahasia yang tak boleh diajarkan secara bebas. Namun penulis buku ini justru mengajak sebanyak mungkin orang untuk mempelajarinya atas dasar kesadaran bahwa leluhur Nusantara mampu mencapai puncak kejayaan ketika menguasai Sastrajendra.<br><br>Sastrajendra yang diwedarkan Resi Wisrawa kepada Dewi Sukesi ribuan tahun silam adalah puncak ajaran spiritual yang mengungkap rahasia jiwa dan jagat raya sekaligus cara untuk menyempurnakan jiwa hingga mampu kembali kepada Sangkan Paraning Dumadi: Tuhan. Ia yang menguasai Sastrajendra adalah manusia sejati yang sanggup hamemayu hayuning bawana ambrasta dur angkara (memperindah jagat raya dan memberantas angkara murka) sebagaimana wejangan Eyang Semar pamomong tanah Jawa<br><br>Namun demikian Sastrajendra hanya bisa dikuasai oleh pribadi yang telah bertekad kuat untuk meruwat jiwa-raganya dari diyu (watak angkara murka) dan terhubung dengan Guru Sejati atau Sang Dewa Ruci yang bertakhta di pusat hati. Ketika seseorang telah terhubung dengan Guru Sejati ia akan mampu mendayagunakan rasa sejati sebagai perangkat kecerdasan utama di dalam diri sehingga memiliki kuasa untuk memulihkan Ibu Pertiwi yang tengah terluka oleh anak-anaknya sendiri."
+    },
+    {
+      "title": "Love Story : Till Death Do Us Part",
+      "author": "Damien Dematra",
+      "cover": "assets/books/Lovestory.jpeg",
+      "progress": 50,
+      "status": "Reading",
+      "sinopsis": "Buku ini merupakan sebuah novel romansa sejarah yang diangkat dari kisah nyata perjalanan cinta antara Utomo Liem dan Lianawati Tedjo.<br><br>Kisah berlatar belakang revolusi kemerdekaan Indonesia pada tahun 1945 di Surabaya. Liana—seorang gadis Tionghoa yang lembut dan pemalu—terpaksa mengungsi di tengah kepanikan akibat pecahnya peperangan dan masuknya pasukan elit Inggris (Gurkha). Kejadian ini memisahkan Liana dari Utomo, kakak kelasnya sewaktu bersekolah di <i>Hollandsche Chineesche School</i>.<br><br>Beberapa tahun kemudian, mereka bertemu kembali secara tidak sengaja. Utomo yang saat itu telah tumbuh menjadi pria gagah, pendiam, dan sukses sebagai pemilik pabrik, tetap meyakini bahwa Liana adalah belahan jiwanya. Namun, perjalanan hidup mereka tidak berhenti di situ; pasang surut kehidupan mulai dari kesuksesan, godaan, gelimangan harta, hingga perpisahan dan kemiskinan terus menguji kekuatan cinta mereka.<br><br>Setelah melewati 65 tahun usia pernikahan bersama, di masa tua dan dalam kerapuhan usia, cinta mereka terbukti tetap mekar dan bertahan hingga maut memisahkan."
     }
   ],
   "readingList": [
+    {
+      "title": "Love Story",
+      "author": "Damien Dematra",
+      "cover": "assets/books/Lovestory.jpeg",
+      "status": "Reading",
+      "progress": 50,
+      "sinopsis": "Buku ini merupakan sebuah novel romansa sejarah yang diangkat dari kisah nyata perjalanan cinta antara Utomo Liem dan Lianawati Tedjo.<br><br>Kisah berlatar belakang revolusi kemerdekaan Indonesia pada tahun 1945 di Surabaya. Liana—seorang gadis Tionghoa yang lembut dan pemalu—terpaksa mengungsi di tengah kepanikan akibat pecahnya peperangan dan masuknya pasukan elit Inggris (Gurkha). Kejadian ini memisahkan Liana dari Utomo, kakak kelasnya sewaktu bersekolah di <i>Hollandsche Chineesche School</i>.<br><br>Beberapa tahun kemudian, mereka bertemu kembali secara tidak sengaja. Utomo yang saat itu telah tumbuh menjadi pria gagah, pendiam, dan sukses sebagai pemilik pabrik, tetap meyakini bahwa Liana adalah belahan jiwanya. Namun, perjalanan hidup mereka tidak berhenti di situ; pasang surut kehidupan mulai dari kesuksesan, godaan, gelimangan harta, hingga perpisahan dan kemiskinan terus menguji kekuatan cinta mereka.<br><br>Setelah melewati 65 tahun usia pernikahan bersama, di masa tua dan dalam kerapuhan usia, cinta mereka terbukti tetap mekar dan bertahan hingga maut memisahkan.",
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
     {
       "title": "Secrets of Divine Love;Edisi Bahasa Indonesia",
       "author": "A. Helwa",
@@ -316,6 +342,42 @@
     }
   ],
   "targetList": [
+    {
+      "title": "Jejak Kupu-Kupu",
+      "author": "Agnes Jessica",
+      "cover": "assets/books/Jejak kupu-kupu.jpeg",
+      "status": "Unread",
+      "progress": 0,
+      "sinopsis": "Buku ini merupakan karya ke-20 dari Primadonna Angela (penulis <i>TeenLit</i> dan <i>MetroPop</i>). Buku ini memiliki format unik yang terbagi menjadi dua bagian utama.<br><br><b>Bagian Pertama (Cerita Fiksi)</b> Menceritakan Zoya Zinnia yang sangat yakin akan bakat menulisnya berkat pujian dari guru Bahasa Indonesia-nya, Bu Molly. Namun, masalah timbul saat Bu Molly cuti dan digantikan oleh Bu Selma—guru yang dianggap tidak bisa berdandan dan tidak peka terhadap bakat Zoya. Perjalanan Zoya sebagai calon penulis pun diuji di bawah bimbingan guru baru tersebut.<br><br><b>Bagian Kedua (Panduan Menulis)</b> Berisi panduan praktis non-fiksi bagi siapa saja yang ingin menjadi penulis. Bagian ini menjelaskan cara mengejar ide, mengembangkan gagasan, hingga tips menyelesaikan naskah tulisan sendiri secara tekun.",
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "How to be a Writer",
+      "author": "Primadonna Angela",
+      "cover": "assets/books/How to be a writer.jpeg",
+      "status": "Unread",
+      "progress": 0,
+      "sinopsis": "Buku ini merupakan karya ke-20 dari Primadonna Angela (penulis <i>TeenLit</i> dan <i>MetroPop</i>). Buku ini memiliki format unik yang terbagi menjadi dua bagian utama.<br><br><b>Bagian Pertama (Cerita Fiksi)</b> Menceritakan Zoya Zinnia yang sangat yakin akan bakat menulisnya berkat pujian dari guru Bahasa Indonesia-nya, Bu Molly. Namun, masalah timbul saat Bu Molly cuti dan digantikan oleh Bu Selma—guru yang dianggap tidak bisa berdandan dan tidak peka terhadap bakat Zoya. Perjalanan Zoya sebagai calon penulis pun diuji di bawah bimbingan guru baru tersebut.<br><br><b>Bagian Kedua (Panduan Menulis)</b> Berisi panduan praktis non-fiksi bagi siapa saja yang ingin menjadi penulis. Bagian ini menjelaskan cara mengejar ide, mengembangkan gagasan, hingga tips menyelesaikan naskah tulisan sendiri secara tekun.",
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
     {
       "title": "Laut Bercerita",
       "author": "Leila S. Chudori",
