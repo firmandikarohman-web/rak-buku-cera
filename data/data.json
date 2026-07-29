@@ -1,6 +1,14 @@
 {
   "currentlyReading": [
     {
+      "title": "Laut Bercerita",
+      "author": "Leila S. Chudori",
+      "cover": "assets/books/laut bercerita.jpeg",
+      "progress": 1,
+      "status": "Reading",
+      "sinopsis": "<b>Jakarta, Maret 1998</b><br>Di sebuah senja, di sebuah rumah susun di Jakarta, mahasiswa bernama Biru Laut disergap empat lelaki tak dikenal. Bersama kawan-kawannya, Daniel Tumbuan, Sunu Dyantoro, Alex Perazon, dia dibawa ke sebuah tempat yang tak dikenal. Berbulan-bulan mereka disekap, diinterogasi, dipukul, ditendang, digantung, dan disetrum agar bersedia menjawab satu pertanyaan penting: siapakah yang berdiri di balik gerakan aktivis dan mahasiswa saat itu.<br><br><b>Jakarta, Juni 1998</b><br>Keluarga Arya Wibisono, seperti biasa, pada hari Minggu sore memasak bersama, menyediakan makanan kesukaan Biru Laut. Sang ayah akan meletakkan satu piring untuk dirinya, satu piring untuk sang ibu, satu piring untuk Biru Laut, dan satu piring untuk si bungsu Asmara Jati. Mereka duduk menanti dan menanti. Tapi Biru Laut tak kunjung muncul.<br><br><b>Jakarta, 2000</b><br>Asmara Jati, adik Biru Laut, beserta Tim Komisi Orang Hilang yang dipimpin Aswin Pradana mencoba mencari jejak mereka yang hilang serta merekam dan mempelajari testimoni mereka yang kembali. Anjani, kekasih Laut, para orangtua dan istri aktivis yang hilang menuntut kejelasan tentang anggota keluarga mereka. Sementara Biru Laut, dari dasar laut yang sunyi bercerita kepada kita, kepada dunia tentang apa yang terjadi pada dirinya dan kawan-kawannya.<br><br>Laut Bercerita, novel terbaru Leila S. Chudori, bertutur tentang kisah keluarga yang kehilangan, sekumpulan sahabat yang merasakan kekosongan di dada, sekelompok orang yang gemar menyiksa dan lancar berkhianat, sejumlah keluarga yang mencari kejelasan akan anaknya, dan tentang cinta yang tak akan luntur."
+    },
+    {
       "title": "Secrets of Divine Love;Edisi Bahasa Indonesia",
       "author": "A. Helwa",
       "cover": "assets/books/Secrets of Divine Love Edisi Bahasa Indonesia.jpeg",
@@ -31,9 +39,53 @@
       "progress": 50,
       "status": "Reading",
       "sinopsis": "Buku ini merupakan sebuah novel romansa sejarah yang diangkat dari kisah nyata perjalanan cinta antara Utomo Liem dan Lianawati Tedjo.<br><br>Kisah berlatar belakang revolusi kemerdekaan Indonesia pada tahun 1945 di Surabaya. Liana—seorang gadis Tionghoa yang lembut dan pemalu—terpaksa mengungsi di tengah kepanikan akibat pecahnya peperangan dan masuknya pasukan elit Inggris (Gurkha). Kejadian ini memisahkan Liana dari Utomo, kakak kelasnya sewaktu bersekolah di <i>Hollandsche Chineesche School</i>.<br><br>Beberapa tahun kemudian, mereka bertemu kembali secara tidak sengaja. Utomo yang saat itu telah tumbuh menjadi pria gagah, pendiam, dan sukses sebagai pemilik pabrik, tetap meyakini bahwa Liana adalah belahan jiwanya. Namun, perjalanan hidup mereka tidak berhenti di situ; pasang surut kehidupan mulai dari kesuksesan, godaan, gelimangan harta, hingga perpisahan dan kemiskinan terus menguji kekuatan cinta mereka.<br><br>Setelah melewati 65 tahun usia pernikahan bersama, di masa tua dan dalam kerapuhan usia, cinta mereka terbukti tetap mekar dan bertahan hingga maut memisahkan."
+    },
+    {
+      "title": "Twice loved : Kembalinya Sang Pelaut",
+      "author": "Spencer, Lavyrle",
+      "cover": "assets/books/kembalinya-sang-pelaut.jpeg",
+      "progress": 1,
+      "status": "Reading",
+      "sinopsis": "Lima tahun lalu, Laura Dalton merelakan suaminya, Rye, di ambil laut. Pelaut itu pamit untuk pergi pada suatu hari dan tak pernah kembali. Meskipun dengan susah payah, Laura belajar untuk membenahi hidupnya. Belajar mencintai lagi, dan pilihan itu jatuh pada teman almarhum suaminya yang begitu perhatian. Namun, sesuatu yang tak disangka-sangka terjadi. Rye ternyata tidak ditelan oleh laut. Laki-laki itu kembali ke darat, menjumpai keadaan yang tak lagi sama."
     }
   ],
   "readingList": [
+    {
+      "title": "Laut Bercerita",
+      "author": "Leila S. Chudori",
+      "cover": "assets/books/laut bercerita.jpg",
+      "status": "Reading",
+      "progress": 1,
+      "sinopsis": "<b>Jakarta, Maret 1998</b><br>Di sebuah senja, di sebuah rumah susun di Jakarta, mahasiswa bernama Biru Laut disergap empat lelaki tak dikenal. Bersama kawan-kawannya, Daniel Tumbuan, Sunu Dyantoro, Alex Perazon, dia dibawa ke sebuah tempat yang tak dikenal. Berbulan-bulan mereka disekap, diinterogasi, dipukul, ditendang, digantung, dan disetrum agar bersedia menjawab satu pertanyaan penting: siapakah yang berdiri di balik gerakan aktivis dan mahasiswa saat itu.<br><br><b>Jakarta, Juni 1998</b><br>Keluarga Arya Wibisono, seperti biasa, pada hari Minggu sore memasak bersama, menyediakan makanan kesukaan Biru Laut. Sang ayah akan meletakkan satu piring untuk dirinya, satu piring untuk sang ibu, satu piring untuk Biru Laut, dan satu piring untuk si bungsu Asmara Jati. Mereka duduk menanti dan menanti. Tapi Biru Laut tak kunjung muncul.<br><br><b>Jakarta, 2000</b><br>Asmara Jati, adik Biru Laut, beserta Tim Komisi Orang Hilang yang dipimpin Aswin Pradana mencoba mencari jejak mereka yang hilang serta merekam dan mempelajari testimoni mereka yang kembali. Anjani, kekasih Laut, para orangtua dan istri aktivis yang hilang menuntut kejelasan tentang anggota keluarga mereka. Sementara Biru Laut, dari dasar laut yang sunyi bercerita kepada kita, kepada dunia tentang apa yang terjadi pada dirinya dan kawan-kawannya.<br><br>Laut Bercerita, novel terbaru Leila S. Chudori, bertutur tentang kisah keluarga yang kehilangan, sekumpulan sahabat yang merasakan kekosongan di dada, sekelompok orang yang gemar menyiksa dan lancar berkhianat, sejumlah keluarga yang mencari kejelasan akan anaknya, dan tentang cinta yang tak akan luntur.",
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "sedikit komen sebelum semuanya aku baca. ini salah satu buku yang sangat kunantikan untuk ku baca sejak dulu. aku terkagum dengan nama cantik Biru Laut, meskipun katanya cerita di dalamnya menegangkan"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
+    {
+      "title": "Senja, Asa, dan Kata",
+      "author": "Irawati Puteri",
+      "cover": "assets/books/senja-asa-kata.jpeg",
+      "status": "Reading",
+      "progress": 100,
+      "sinopsis": "“Senja, Asa, dan Kata” adalah sebuah buku kumpulan puisi dan prosa karya Irawati Puteri yang diterbitkan pada November 2016. Karya ini menggambarkan perjalanan emosional seseorang dalam merefleksikan waktu, merawat harapan, dan merangkai kata-kata puitis dari setiap denyut kehidupan.",
+      "reviews": {
+        "rohman": {
+          "rating": "10/10",
+          "comment": "Buku yang membuatku dapat melantunkan puisi untuknya ketika malam"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
     {
       "title": "Love Story",
       "author": "Damien Dematra",
@@ -367,24 +419,6 @@
       "status": "Unread",
       "progress": 0,
       "sinopsis": "Buku ini merupakan karya ke-20 dari Primadonna Angela (penulis <i>TeenLit</i> dan <i>MetroPop</i>). Buku ini memiliki format unik yang terbagi menjadi dua bagian utama.<br><br><b>Bagian Pertama (Cerita Fiksi)</b> Menceritakan Zoya Zinnia yang sangat yakin akan bakat menulisnya berkat pujian dari guru Bahasa Indonesia-nya, Bu Molly. Namun, masalah timbul saat Bu Molly cuti dan digantikan oleh Bu Selma—guru yang dianggap tidak bisa berdandan dan tidak peka terhadap bakat Zoya. Perjalanan Zoya sebagai calon penulis pun diuji di bawah bimbingan guru baru tersebut.<br><br><b>Bagian Kedua (Panduan Menulis)</b> Berisi panduan praktis non-fiksi bagi siapa saja yang ingin menjadi penulis. Bagian ini menjelaskan cara mengejar ide, mengembangkan gagasan, hingga tips menyelesaikan naskah tulisan sendiri secara tekun.",
-      "reviews": {
-        "rohman": {
-          "rating": "0/0",
-          "comment": "belum komen"
-        },
-        "margi": {
-          "rating": "0/0",
-          "comment": "belum komen"
-        }
-      }
-    },
-    {
-      "title": "Laut Bercerita",
-      "author": "Leila S. Chudori",
-      "cover": "assets/books/laut bercerita.jpg",
-      "status": "Unread",
-      "progress": 0,
-      "sinopsis": "<b>Jakarta, Maret 1998</b><br>Di sebuah senja, di sebuah rumah susun di Jakarta, mahasiswa bernama Biru Laut disergap empat lelaki tak dikenal. Bersama kawan-kawannya, Daniel Tumbuan, Sunu Dyantoro, Alex Perazon, dia dibawa ke sebuah tempat yang tak dikenal. Berbulan-bulan mereka disekap, diinterogasi, dipukul, ditendang, digantung, dan disetrum agar bersedia menjawab satu pertanyaan penting: siapakah yang berdiri di balik gerakan aktivis dan mahasiswa saat itu.<br><br><b>Jakarta, Juni 1998</b><br>Keluarga Arya Wibisono, seperti biasa, pada hari Minggu sore memasak bersama, menyediakan makanan kesukaan Biru Laut. Sang ayah akan meletakkan satu piring untuk dirinya, satu piring untuk sang ibu, satu piring untuk Biru Laut, dan satu piring untuk si bungsu Asmara Jati. Mereka duduk menanti dan menanti. Tapi Biru Laut tak kunjung muncul.<br><br><b>Jakarta, 2000</b><br>Asmara Jati, adik Biru Laut, beserta Tim Komisi Orang Hilang yang dipimpin Aswin Pradana mencoba mencari jejak mereka yang hilang serta merekam dan mempelajari testimoni mereka yang kembali. Anjani, kekasih Laut, para orangtua dan istri aktivis yang hilang menuntut kejelasan tentang anggota keluarga mereka. Sementara Biru Laut, dari dasar laut yang sunyi bercerita kepada kita, kepada dunia tentang apa yang terjadi pada dirinya dan kawan-kawannya.<br><br>Laut Bercerita, novel terbaru Leila S. Chudori, bertutur tentang kisah keluarga yang kehilangan, sekumpulan sahabat yang merasakan kekosongan di dada, sekelompok orang yang gemar menyiksa dan lancar berkhianat, sejumlah keluarga yang mencari kejelasan akan anaknya, dan tentang cinta yang tak akan luntur.",
       "reviews": {
         "rohman": {
           "rating": "0/0",
