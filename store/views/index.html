@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rak Buku Cera Store</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .btn-cart {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background: var(--text-primary);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: inherit;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .btn-cart:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Parallax Blobs Context -->
+    <div class="blob-wrapper" id="blobWrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="glass-nav sticky-nav">
+        <div class="nav-content">
+            <a href="/" class="logo"
+                style="text-decoration:none; font-family:'Playfair Display'; font-weight:bold; font-size:1.5rem; color:#111;">
+                Rak Buku Cera Store
+            </a>
+            
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/">Katalog</a></li>
+                <li><a href="/cart"></i> Keranjang <span id="cart-count"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section section-scroll">
+            <h2 class="section-title reveal-stagger" style="text-align: center; width: 100%;">Katalog Buku</h2>
+            <div class="glass-card full-width-card">
+                <div class="books-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; width: 100%;">
+                    <p style="text-align: center; grid-column: 1 / -1;">Memuat data dari database...</p>
+                </div>
+            </div>
+        </section>
+        <footer class="glass-footer" style="margin-top: 60px;">
+            <p>&copy; 2026 Rak Buku Cera | Dwi Margi Astuti x Rohman Firmandika</p>
+        </footer>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

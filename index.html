@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rak Buku Cera - Digital Bookshelf & Reading Log.">
+    <meta name="keywords"
+        content="Rohman Firmandika, Dwi Margi Astuti, Rhopalocera, Rak Buku Cera,Rak Buku Dwi Margi Astuti, Rak Buku Rohman Firmandika,Galeri Dwi Margi Astuti, Galeri Rohman Firmandika, Ruang Metamorfosis Pikiran, Reading Log, Digital Bookshelf, Book Review">
+    <meta name="author" content="Rohman Firmandika & Dwi Margi Astuti">
+
+    <title>Rak Buku Cera</title>
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Rak Buku Cera">
+    <meta property="og:description" content="Digital Bookshelf & Reading Log.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Parallax Blobs Context -->
+    <div class="blob-wrapper" id="blobWrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="glass-nav sticky-nav">
+        <div class="nav-content">
+            <a href="#home" class="logo">
+                <img src="assets/logo-rhopalocera.png" alt="Rhopalocera" class="logo-img">
+            </a>
+
+            <div class="nav-actions">
+                <div class="search-capsule" onclick="document.getElementById('searchInput').focus()">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Cari buku..." class="search-input">
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#currently-reading">Sedang Dibaca</a></li>
+                <li><a href="#reading-list">Jejak Baca</a></li>
+                <li><a href="#target-list">Antrean Baca</a></li>
+                <li><a href="#about">Kisah Cera</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#games">Permainan</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">Sapa Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Title Section -->
+        <section id="home" class="hero" style="min-height: auto; padding-top: 150px; padding-bottom: 20px;">
+            <div class="hero-content">
+                <h1 class="reveal-stagger" style="text-align: center;"><br>Selamat Datang di<br>Rak Buku Cera<br>
+                </h1>
+            </div>
+        </section>
+
+        <!-- Top Split Container for Desktop -->
+        <div class="desktop-split">
+            <!-- Home Tagline Section -->
+            <section id="home-desc" class="hero section-scroll" style="min-height: auto; padding-top: 0;">
+                <div class="glass-card"
+                    style="padding: 40px; border-radius: 24px; max-width: 700px; width: 100%; background: rgba(197, 171, 116, 0.3); border: none; box-shadow: none;">
+                    <div class="hero-content">
+                        <p class="tagline reveal-stagger">Merupakan '<b>Ruang Digital Personal</b>' yang terbuka untuk
+                            publik —tempat kami mengarsipkan perjalanan membaca, merangkai tulisan blog, berbagi
+                            permainan sederhana, serta mengabadikan momen lewat foto.<br><br>Mari telusuri
+                            jejak kami disini!<br>Selamat menjelajah!
+                        </p>
+                        <img src="assets/margi-rohman.png" class="margi-rohman" alt="Margi-Rohman" />
+                    </div>
+                </div>
+
+                <!-- Scroll Down Arrow -->
+                <div class="scroll-down-container">
+                    <a href="#currently-reading" class="scroll-down-btn reveal-stagger"
+                        aria-label="Scroll to Now Reading Section">
+                        <i data-feather="chevron-down"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Currently Reading Section -->
+            <section id="currently-reading" class="section section-scroll mb-large">
+                <h2 class="section-title reveal-stagger">Buku yang Sedang Kami Baca</h2>
+                <div class="glass-card full-width-card">
+                    <div id="currently-reading-container" style="display: flex; justify-content: center; width: 100%;">
+                        <!-- Dynamic Currently Reading Content -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Reading List Section -->
+        <section id="reading-list" class="section section-scroll mb-large">
+            <h2 class="section-title reveal-stagger">Jejak Baca</h2>
+            <div class="glass-card list-card">
+                <div id="reading-list-container" class="bookshelf-grid">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Target List Section -->
+        <section id="target-list" class="section section-scroll mb-large">
+            <h2 class="section-title reveal-stagger">Buku yang Ingin Kami Baca</h2>
+            <div class="glass-card list-card">
+                <div id="target-list-container" class="bookshelf-grid">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section section-scroll">
+            <h2 class="section-title reveal-stagger">Kisah "Rak Buku Cera"</h2>
+            <div class="glass-card full-width-card">
+                <div class="about-content">
+                    <div class="about-image-wrapper">
+                        <div class="img-loading-wrapper is-loading"
+                            style="width: 100%; height: 100%; border-radius: inherit;">
+                            <div class="loading-icon-container">
+                                <i data-feather="smile"></i>
+                                <span class="loading-text">Memuat</span>
+                            </div>
+                            <img src="assets/profile.png" alt="Rhopalocera" class="about-image"
+                                onload="this.parentElement.classList.remove('is-loading')"
+                                onerror="this.parentElement.classList.remove('is-loading'); this.src='https://via.placeholder.com/400x400?text=Rhopalocera'">
+                        </div>
+                    </div>
+                    <p class="about-narrative text-lead">
+                        "Sesibuk apa pun hari yang terlewati, membaca buku adalah jeda yang selalu kami usahakan. Bagi
+                        kami, memaknai kalimat demi kalimat adalah upaya kecil untuk terus mengisi gelas pengetahuan.
+                        Tak perlu terburu-buru menghabiskan banyak halaman; secukupnya saja, asalkan konsisten. Lewat
+                        Rak Buku Cera, kami berharap ruang ini bisa menjadi inspirasi bagi siapa pun yang sedang mencari
+                        teman bacaan di kala senggang. Mari jadikan membaca sebagai kebiasaan yang
+                        menyenangkan—berdiskusi, bertukar pikiran, dan mencatat setiap makna, agar waktu yang dilalui
+                        bersama selalu meninggalkan jejak yang bermanfaat."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section section-scroll mb-large">
+            <h2 class="section-title reveal-stagger">Blog</h2>
+            <div class="glass-card list-card">
+                <div id="blog-container" class="bookshelf-grid">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="games" class="section section-scroll mb-large">
+            <h2 class="section-title reveal-stagger">Permainan</h2>
+            <div class="glass-card list-card">
+                <div id="game-container" class="bookshelf-grid">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section section-scroll mb-large">
+            <h2 class="section-title reveal-stagger">Galeri</h2>
+            <div class="glass-card list-card">
+                <div id="gallery-container" class="bookshelf-grid gallery-grid">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-scroll mb-large">
+            <h2 class="section-title reveal-stagger">Sosok dibalik "Rak Buku Cera"</h2>
+            <div class="glass-card contact-card">
+                <div class="dual-contact-wrapper">
+                    <a href="https://www.instagram.com/dwimargias/" target="_blank"
+                        class="instagram-btn magnetic reveal-stagger">
+                        <i data-feather="instagram"></i>
+                        <span>@dwimargias</span>
+                    </a>
+                    <a href="https://www.instagram.com/rohmanfirmandika/" target="_blank"
+                        class="instagram-btn magnetic reveal-stagger">
+                        <i data-feather="instagram"></i>
+                        <span>@rohmanfirmandika</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <img src="assets/thankyou.png" class="thankyou-image" alt="Thank You" />
+
+        <footer class="glass-footer">
+            <p>&copy; 2026 Rak Buku Cera | Dwi Margi Astuti x Rohman Firmandika</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
