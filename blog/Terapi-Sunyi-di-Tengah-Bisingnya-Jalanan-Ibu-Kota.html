@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rak Buku Cera - Blog">
+    <title>Terapi Sunyi di Tengah Bisingnya Jalanan Ibu Kota | Rak Buku Cera</title>
+    <link rel="icon" type="image/jpeg" href="../assets/favicon.jpeg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .blog-meta {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .share-btn {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 8px 20px;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(40px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 50px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .blog-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .blog-content h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: rgba(17, 17, 17, 0.9);
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 0.95rem;
+            transition: visibility 0s, opacity 0.5s ease;
+            opacity: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content {
+                padding: 30px 20px;
+            }
+
+            .blog-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Parallax Blobs Context -->
+    <div class="blob-wrapper" id="blobWrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <!-- Sticky Navigation -->
+    <nav class="glass-nav sticky-nav">
+        <div class="nav-content">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo-rhopalocera.png" alt="Rhopalocera" class="logo-img">
+            </a>
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Beranda</a></li>
+                <li><a href="../index.html#currently-reading">Sedang Dibaca</a></li>
+                <li><a href="../index.html#reading-list">Jejak Baca</a></li>
+                <li><a href="../index.html#target-list">Antrean Baca</a></li>
+                <li><a href="../index.html#about">Kisah Cera</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#games">Permainan</a></li>
+                <li><a href="../index.html#gallery">Galeri</a></li>
+                <li><a href="../index.html#contact">Sapa Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main style="padding-top: 150px;">
+        <section class="section">
+            <div class="blog-header reveal-stagger in-view">
+                <h1 class="blog-title">Terapi Sunyi di Tengah Bisingnya Jalanan Ibu Kota</h1>
+                <div class="blog-meta">30 September 2026 | Rohman Firmandika</div>
+                <button class="share-btn magnetic" onclick="copyLink()">
+                    <i data-feather="link" style="width: 16px; height: 16px;"></i> Link copied
+                </button>
+            </div>
+            <article class="blog-content reveal-stagger in-view">
+                <p>Langit Cibubur masih menyisakan rona pekat malam saat aku memacu motorku menembus kabut tipis. Angin dini hari selalu punya cara sendiri untuk menyusup ke balik jaketku, meniupkan rasa dingin yang seolah mengingatkan bahwa <i>rutinitas tak pernah mengenal kata kompromi</i>. Siklus hidupku terus berputar di antara dua kutub yang sama-sama menuntut; deretan pekerjaan di kawasan Jakarta yang ritmenya seolah tak pernah melambat, dan tumpukan modul kuliah yang setia menanti di meja kamarku setiap malam. Berangkat sebelum matahari benar-benar merekah, dan baru bisa merasakan empuknya kasur saat sinarnya sudah lama tenggelam.</p>
+
+<p>Kuarahkan laju motorku menuju pelataran parkir Wiladatika, tak jauh dari keramaian halte Cibubur Junction. Aroma embun pagi yang bercampur dengan asap knalpot tipis menyambutku saat mengambil kertas parkir. Di titik inilah, ritual harianku yang sesungguhnya dimulai: <b>menimbang nasib di atas aspal ibu kota</b>. Mataku akan menyapu kondisi Tol Jagorawi dari kejauhan. Jika jalanan panjang itu mulai terlihat seperti ular besi raksasa yang tersendat—kumpulan kendaraan yang saling mengunci mati—aku akan memutar tumit menuju stasiun LRT Harjamukti. Mengambang di atas kemacetan dengan kereta kilat selalu jadi pereda frustrasi yang ampuh. Namun, di hari-hari di mana jalanan tampak sedikit lebih bersahabat, aku lebih suka melangkah ke halte, membiarkan diriku terbuai ayunan bus yang melaju membelah kota.</p>
+
+<p>Hari ini, pilihanku jatuh pada deru mesin bus. Aku melangkah masuk, mencari sudut yang pas, dan menyandarkan punggung yang mulai terasa kaku. Di sekelilingku, lautan manusia dengan wajah-wajah serupa mulai berdesakan. Pandangan mereka kosong, terpaku pada jendela atau layar ponsel, dengan bahu yang menurun lelah dan embusan napas berat yang bersahutan.</p>
+
+<p>Aku menatap mereka dan merasakan sebuah getaran realitas yang getir. Catatan-catatan ilmiah yang pernah kubaca tiba-tiba tidak lagi terasa seperti deretan angka mati; <b>lima puluh dua persen pekerja metropolitan nyatanya benar-benar memikul kelelahan kerja kronis di dalam kepala mereka setiap pagi</b>. Beban psikologis ini mengendap dalam diam, menjelma menjadi <i>epidemi sunyi</i>, terutama bagi generasiku—Generasi Z dan milenial yang setiap hari harus merelakan sebagian kewarasannya di jalan. Terjebak dalam waktu tempuh komuter yang menembus lebih dari lima puluh menit bukan sekadar perkara raga yang terguncang, melainkan sebuah rutinitas yang perlahan menciptakan risiko tertinggi terhadap kelelahan emosional yang memadamkan semangat.</p>
+
+<p>Di tengah kepenatan massal itu, pandanganku tertumbuk pada seorang perempuan di seberang kursi. Ia menunduk khusyuk, jari-jarinya membalik lembaran sebuah novel dengan ritme yang konstan. Di ruangan yang riuh dan berdesakan ini, ia seolah memiliki perisai pelindungnya sendiri. Raut wajahnya begitu tenang. <b>Sebuah kontras yang magis.</b></p>
+
+<p>Pemandangan kecil itu menggetarkan sesuatu di dadaku. Tiba-tiba, ambisiku terasa jauh lebih besar daripada sekadar membuka sebuah etalase toko buku <i>online</i>. Aku ingin hadir di tengah-tengah mereka. Aku ingin berjalan beriringan menyusuri lorong komuter yang melelahkan ini, merangkul teman-teman pekerja dan pelajar yang memiliki mobilitas setinggi awan namun energi mental yang tersisa setipis kertas. Aku ingin mempromosikan buku—terutama novel-novel fiksi yang kalem, membumi, dan memeluk erat—<b>sebagai sebuah solusi nyata</b>. Sebuah ruang pelarian yang bisa digenggam.</p>
+
+<p>Aku ingin menyodorkan keajaiban <i>biblioterapi</i> kepada mereka tanpa harus terdengar seperti seorang terapis kaku di ruang klinis. Bagiku, ini hanyalah sebuah proses yang hangat; sebuah katarsis emosional di mana pembaca bisa melihat pergumulan hidup mereka direfleksikan secara sempurna oleh karakter fiktif di dalam cerita. Sebuah jeda yang elegan untuk mendisrupsi siklus kecemasan yang sering kali berisik di kepala. Tujuanku hanya satu: <b>mengubah waktu transit komuter yang selama ini memicu stres dan sesak napas, menjadi sebuah fase pemulihan mental yang produktif.</b></p>
+
+<p>Entah kapan tepatnya tanggal rilis persembahan kecilku ini. Aku masih merajut setiap rencananya dengan hati-hati di sela-sela kesibukanku. Namun, menatap wajah-wajah lelah di sekelilingku pagi ini, aku tahu persis untuk siapa ini semua kubuat. Kelak, setiap novel yang sampai ke tangan mereka bukan sekadar produk yang dibeli. Aku ingin buku-buku itu menjadi teman seperjalanan yang baik, sebuah tepukan lembut di bahu saat mereka bersandar lelah di jendela bus atau kereta, yang diam-diam berbisik lirih,</p>
+
+<blockquote style="border-left: 4px solid #888; padding-left: 15px; margin-left: 0; color: #555;">
+    <i><b>"Tidak apa-apa, lepaskan lelahmu di halaman ini. Hari ini, kamu sudah bertahan dengan sangat luar biasa."</b></i>
+</blockquote>
+            </article>
+        </section>
+        <footer class="glass-footer" style="margin-top: 60px;">
+            <p>&copy; 2026 Rak Buku Cera | Dwi Margi Astuti x Rohman Firmandika</p>
+        </footer>
+    </main>
+    <!-- Toast Notification -->
+    <div id="toast">Link copied!</div>
+    <script>
+        feather.replace();
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.getElementById("toast");
+                toast.className = "show";
+                setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+            });
+        }
+
+        // Blobs Parallax
+        const blobWrapper = document.getElementById('blobWrapper');
+        window.addEventListener('scroll', () => {
+            if (blobWrapper && window.innerWidth > 768) {
+                const scrolled = window.scrollY;
+                blobWrapper.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+
+        // Mobile Menu
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinksContainer = document.querySelector('.nav-links');
+        if (menuBtn && navLinksContainer) {
+            menuBtn.addEventListener('click', () => {
+                navLinksContainer.classList.toggle('active');
+                if (navLinksContainer.classList.contains('active')) {
+                    menuBtn.innerHTML = '<i data-feather="x"></i>';
+                } else {
+                    menuBtn.innerHTML = '<i data-feather="menu"></i>';
+                }
+                feather.replace();
+            });
+        }
+
+        // Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal-stagger');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Magnetic Effect
+        if (window.matchMedia("(pointer: fine)").matches) {
+            const btns = document.querySelectorAll('.magnetic');
+            btns.forEach(btn => {
+                btn.addEventListener('mousemove', function (e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const deltaX = (x - centerX) * 0.1;
+                    const deltaY = (y - centerY) * 0.1;
+                    this.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+                });
+                btn.addEventListener('mouseleave', function () {
+                    this.style.transform = ``;
+                });
+            });
+        }
+    </script>
+</body>
+
+  </html>
