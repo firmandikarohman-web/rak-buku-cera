@@ -743,16 +743,16 @@
   ],
   "blog": [
     {
+      "title": "Terapi Sunyi di Tengah Bisingnya Jalanan Ibu Kota",
+      "image": "blog/gallery/transum.jpg",
+      "excerpt": "Langit Cibubur masih menyisakan rona pekat malam saat aku memacu motorku menembus kabut tipis. Angin dini hari selalu punya cara sendiri untuk menyusup ke balik jaketku, meniupkan rasa dingin yang seolah mengingatkan bahwa rutinitas tak pernah mengenal kata kompromi. Siklus hidupku terus berputar di antara dua kutub yang sama-sama menuntut; deretan pekerjaan di kawasan Jakarta yang ritmenya seolah tak pernah melambat, dan tumpukan modul kuliah yang setia menanti di meja kamarku setiap malam. Berangkat sebelum matahari benar-benar merekah, dan baru bisa merasakan empuknya kasur saat sinarnya sudah lama tenggelam.",
+      "link": "blog/Terapi-Sunyi-di-Tengah-Bisingnya-Jalanan-Ibu-Kota.html"
+    },
+    {
       "title": "Nyeritain Perjalanan Mudikku",
       "image": "blog/gallery/tas-ungaran.jpeg",
       "excerpt": "Mudik kali ini terasa jauh lebih istimewa. Alasannya sederhana, namun cukup membuatku terus tersenyum: ada Margi yang menemani perjalananku...",
       "link": "blog/nyeritain-perjalanan-mudikku.html"
-    },
-    {
-      "title": "Terapi Sunyi di Tengah Bisingnya Jalanan Ibu Kota",
-      "image": "blog/gallery/",
-      "excerpt": "...",
-      "link": "blog/Terapi-Sunyi-di-Tengah-Bisingnya-Jalanan-Ibu-Kota.html"
     }
   ],
   "games": [
