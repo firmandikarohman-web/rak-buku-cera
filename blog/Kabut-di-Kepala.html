@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rak Buku Cera - Blog">
+    <title>Kabut di Kepala | Rak Buku Cera</title>
+    <link rel="icon" type="image/jpeg" href="../assets/favicon.jpeg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .blog-meta {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .share-btn {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 8px 20px;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(40px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 50px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .blog-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .blog-content h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: rgba(17, 17, 17, 0.9);
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 0.95rem;
+            transition: visibility 0s, opacity 0.5s ease;
+            opacity: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content {
+                padding: 30px 20px;
+            }
+
+            .blog-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Parallax Blobs Context -->
+    <div class="blob-wrapper" id="blobWrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <!-- Sticky Navigation -->
+    <nav class="glass-nav sticky-nav">
+        <div class="nav-content">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo-rhopalocera.png" alt="Rhopalocera" class="logo-img">
+            </a>
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Beranda</a></li>
+                <li><a href="../index.html#currently-reading">Sedang Dibaca</a></li>
+                <li><a href="../index.html#reading-list">Jejak Baca</a></li>
+                <li><a href="../index.html#target-list">Antrean Baca</a></li>
+                <li><a href="../index.html#about">Kisah Cera</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#games">Permainan</a></li>
+                <li><a href="../index.html#gallery">Galeri</a></li>
+                <li><a href="../index.html#contact">Sapa Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main style="padding-top: 150px;">
+        <section class="section">
+            <div class="blog-header reveal-stagger in-view">
+                <h1 class="blog-title">Kabut di Kepala</h1>
+                <div class="blog-meta">9 Oktober 2026 | Rohman Firmandika</div>
+                <button class="share-btn magnetic" onclick="copyLink()">
+                    <i data-feather="link" style="width: 16px; height: 16px;"></i> Link copied
+                </button>
+            </div>
+            <article class="blog-content reveal-stagger in-view">
+                <p>Dering panjang yang melengking dari ponsel di samping kepala mengoyak keheningan subuh dengan paksa. Cahaya dari layarnya menembus kelopak mataku yang masih terasa seberat beban hidup. Astaga. Baru mulaiiiiiiiiiiii. Yasudah kita lanjut... Nama Margi berkedip di sana, berpendar dalam keremangan kamar. Refleks, mataku terbuka lebar. Separuh nyawaku masih tertinggal di alam mimpi, sementara separuhnya lagi langsung dirundung sesal yang pekat.</p>
+
+<p>Semalam, aku sendiri yang memintanya untuk menelepon ketika pekerjaannya sudah mulai senggang. Kami tahu ritme kami sering kali bersilangan—ketika duniaku perlahan meredup menuju istirahat, dunianya justru baru mulai berdenyut. Namun apa daya, tubuhku ternyata memiliki otoritas dan rencananya sendiri. Kutarik ponsel itu, mengusap layarnya, dan membuka jendela obrolan kami. Kulihat pesannya yang masuk beberapa jam lalu, serangkaian kalimat manis yang menyatakan bahwa ia tak ingin mengusik tidur lelapku. Ada sebersit rasa hangat yang menjalar di dada membaca pengertiannya, namun rasa bersalah tetap saja membayangi.</p>
+
+<p>Mungkin, jika harus mencari kambing hitam, ini semua salah martabak manis yang kubeli jam delapan malam tadi. Setelah menempuh perjalanan pulang ke <b>Cileungsi</b>, melewati jalanan yang biasanya menyita kewarasan, aku mendapati kedai di depan perumahan yang biasanya riuh oleh antrean itu kebetulan sepi. Itu adalah godaan fatal bagi seseorang yang baru saja berpuasa seharian. Secara biologis, tubuhku yang kehabisan cadangan glikogen sedang berada dalam mode bertahan hidup, berteriak menuntut asupan energi instan.</p>
+
+<p>Otakku seolah berpesta menyambut aroma mentega yang meleleh di atas wajan panas. Ketika gigitan pertama menyentuh lidah, ledakan manis dari cokelat, taburan kacang, dan mentega cair itu memang memanjakan setiap reseptor pengecapku. Namun, di balik kenikmatan itu, sebuah proses yang tak terhindarkan sedang terjadi. Lonjakan glukosa yang masif ke dalam aliran darahku segera memicu pankreas untuk memproduksi insulin secara besar-besaran. Tarik-menarik hormonal ini menciptakan <i>sugar crash</i>—penurunan kadar gula darah secara drastis yang membawa gelombang kantuk luar biasa. Usai mandi dan menunaikan sholat isya, kelopak mataku seolah diganduli beban tak kasatmata. Aku terlelap begitu saja, tenggelam ke dalam fase <i>deep sleep</i> yang bahkan tak mampu ditembus oleh notifikasi pesan Margi.</p>
+
+<hr>
+
+<p>Guyuran air dingin sisa subuh akhirnya perlahan menyapu sisa-sisa kantuk dan kabut di kepalaku. Air yang menyentuh kulit memicu aliran darah segar langsung ke organ-organ vital, termasuk otakku. Sensasi kejut itu mengembalikan kesadaranku sepenuhnya. Setelah berpakaian rapi, aku melangkah ke halaman depan. Udara pagi yang masih bersih dan dingin khas pinggiran kota mengisi paru-paruku, membawa aroma embun dan tanah yang samar.</p>
+
+<p>Kumasukkan kunci ke lubang kontak motorku. Mesin 150cc itu langsung menderu halus memecah sepi begitu mesin berputar dengan iramanya. Ada sesuatu yang menenangkan dari getaran mekanis yang menjalar dari stang ke telapak tanganku, sebuah ritme konstan yang sudah sangat kuakrabi. Sambil menunggu mesinnya memanas hingga mencapai suhu operasional yang ideal, jemariku menari di atas layar ponsel.</p>
+
+<p><i>"Aku jalan dulu ya,"</i> pesanku terkirim untuk Margi. Singkat, namun cukup untuk memberitahunya bahwa aku sudah memulai hariku, dan bahwa ia adalah orang pertama yang melintas di pikiranku pagi ini.</p>
+
+<p><i>Smartwatch</i> yang aku kenakan dipergelangan tanganku baru bergeser sedikit dari angka setengah enam pagi saat roda mulai menyusuri aspal menuju <b>Cibubur</b>. Semesta rupanya sedang berbaik hati hari ini. Setibanya di titik keberangkatan, bus P11 merapat dengan antrean yang sangat bersahabat. Entah kenapa, Jumat pagi selalu punya magisnya sendiri bagi para komuter. Lengang. Orang-orang seolah enggan terburu-buru menyambut akhir pekan. Aku melangkah naik dan berhasil melabuhkan tubuhku di salah satu kursi kosong di dekat jendela, merengkuh kemewahan kecil yang jarang terjadi sebelum bus raksasa ini merayap membelah kemacetan menuju Jakarta.</p>
+
+<p>Sambil menatap deretan gedung dan lampu jalan yang berlarian dari balik kaca jendela, sadarku perlahan berlabuh pada satu hal: selama tiga hari terakhir, kepalaku rasanya dipenuhi kabut. Fokusku berantakan, seolah ada lapisan kaca buram antara diriku dan realitas. Niat awalku untuk tidur lebih awal semalam sebenarnya adalah sebuah intervensi sadar—sebuah upaya untuk memberi waktu bagi sel-sel saraf, terutama di area korteks prefrontal otakku, untuk melakukan <i>pruning</i> atau pembersihan toksin sisa metabolisme. Area itulah yang bertanggung jawab atas konsentrasi, pengambilan keputusan, dan fokus tingkat tinggi. Aku berharap tidur semalam bisa mengembalikan kejernihan itu. Tapi rasanya, residu kabut itu masih betah berlama-lama, menempel seperti debu di kaca spion.</p>
+
+<p>Aku menghela napas panjang, menggulir menu di ponselku, dan menekan <i>link</i> modul mata kuliah yang sudah aku jadwalkan setiap hari. Ujian sebentar lagi, dan lembar-lembar ini menuntut untuk dituntaskan. Agar konsentrasiku tak makin pecah oleh dengung mesin diesel bus dan obrolan sayup para penumpang, kupasang <i>earphone</i> ke telinga. Jari-jariku menggulir layar ponsel, memilih <i>playlist</i> jazz instrumental.</p>
+
+<p>Denting piano yang dipadukan dengan tiupan saksofon bertempo lambat mulai mengalun, mengisolasi diriku dari dunia luar. Ritme pelan tanpa lirik ini sengaja kupilih bukan tanpa alasan. Secara neurologis, nada-nada konstan bertempo sekitar enam puluh ketukan per menit sangat efektif untuk menstimulasi otak agar memproduksi gelombang alfa. Ini adalah frekuensi di mana pikiran kita berada dalam kondisi paling rileks namun tetap terjaga dan reseptif terhadap informasi baru. Aku berharap musik ini bisa menjadi semacam jangkar—sebuah metronom penenang agar kepalaku tak melayang ke mana-mana saat memproses teori-teori modul yang kaku.</p>
+
+<p>Namun, di sela-sela membolak-balik halaman modul yang berisi deretan konsep metode statistika, pikiranku malah kembali bercabang. Kemarin, saat sedang merapikan situs <b>s.id/bukupu</b>, aku sempat merenungkan kembali efektivitas <i>bibliotherapy</i>. Konsep itu menyarankan penggunaan literatur, khususnya bacaan ringan seperti novel fiksi, sebagai katarsis emosional dan medium untuk menyembuhkan stres. Membaca novel—terhanyut dalam konflik karakter, meresapi romansa, atau sekadar menikmati alur yang tak tertebak—di tengah kerasnya perjalanan komuter tentu terasa jauh lebih memanjakan jiwa dibanding harus menelan mentah-mentah teori ekonomi.</p>
+
+<p>Saat kita membaca sesuatu yang kita nikmati, otak melepaskan dopamin dan perlahan menurunkan kadar kortisol, hormon utama pemicu stres. Tersenyum pada plot cerita rasanya jauh lebih ampuh untuk menetralisir kelelahan mental usai bekerja keras. Terkadang, aku membayangkan alangkah menyenangkannya jika aku bisa menghabiskan waktu perjalanan ini dengan membaca novel karya penulis-penulis favorit kami.</p>
+
+<p>Tapi, realitas gedung-gedung Jakarta yang menjulang di luar jendela bus ini memaksaku menjejak bumi kembali. Ada tanggung jawab yang harus kuselesaikan. Modul ini adalah jembatanku menuju tujuan yang lebih besar. Mungkinkah otakku saat ini sedang mengalami kelelahan kognitif? Mungkin deretan materi ini memang semakin berat, hingga otakku, sebagai mekanisme pertahanan diri, diam-diam memberontak dan menolak untuk fokus. Ia lebih memilih mengembara, mencari <i>reward</i> instan dari lamunan yang menyenangkan daripada harus membakar kalori ekstra untuk memecahkan soal manajerial. Menyadari kontradiksi di dalam kepalaku sendiri, aku hanya bisa tersenyum simpul, merutuki sistem kerjaku yang sedang tidak sinkron pagi ini.</p>
+
+<p>Lamunanku terpotong halus saat laju bus perlahan melambat, diiringi suara rem angin yang mendesis, merapat di <b>Halte Pasar Santa</b>. Aku bergegas merapikan <i>earphone</i>-ku, memasukkannya kembali ke dalam tas, dan melangkah turun. Udara Jakarta yang mulai menghangat menyambutku. Aku menyambung perjalanan, berpindah ke armada bus 6V. Bus biru ini meluncur mulus, membelah koridor yang membawaku mendekat ke pusat denyut nadi kota, berhenti tepat di <b>Halte Bundaran Senayan</b>.</p>
+
+<p>Dari sana, sisa perjalanan harus kutempuh dengan mengayunkan langkah. Trotoar yang lebar mengarahkanku menyusuri kawasan <b>SCBD</b>. Deretan gedung pencakar langit dengan kaca yang memantulkan sinar matahari pagi tampak seperti barisan raksasa yang sedang berbaris rapi. Langkahku mantap membelah keramaian para pekerja dan orang-orang yang sedang berolahraga. Hingga akhirnya aku tiba di lobi <b>Office 8</b>.</p>
+
+<p>Suasana kantor masih sangat sepi. Hanya terdengar dengung samar dari sistem pendingin ruangan. Aku menarik kursi, meletakkan tas, dan duduk menikmati keheningan pagi ini. Aku menyempatkan diri menyantap sarapan yang kubawa, lalu menyeduh secangkir kopi. Kepulan uap beraroma khas, sedikit <i>nutty</i>, dan karamel menguar di udara, memenuhi ruangan dengan wangi yang menenangkan. Saat tegukan pertama membasahi kerongkongan, rasanya seperti ada tombol yang ditekan di dalam kepalaku. Kafein yang meresap ke dalam aliran darahku mulai bekerja melakukan sihir biokimianya. Ia mulai bergerak cepat menuju otak, mengelabuinya secara sempurna, memblokir sinyal kantuk, dan menggantinya dengan letupan energi kewaspadaan yang baru.</p>
+
+<p>Sensasi segar ini membuat mataku sepenuhnya terbuka, menyingkirkan sisa-sisa kabut yang sejak tiga hari terakhir mendekapku. Hari ini adalah hari Jumat. Ada sebuah ritme yang melambat di penghujung pekan kerja ini. Ada ketenangan spiritual yang selalu kutunggu dari gema khutbah di masjid siang nanti—sebuah jeda eksistensial yang selalu berhasil mereset ulang seluruh beban di pundak. Dan pagi ini, bersama sisa kepulan asap dari cangkir kopiku, aku merasa sepenuhnya hadir. Semua sisa kantuk, sesal subuh tadi, dan penatnya perjalanan dari <b>Cileungsi</b> telah menguap bersamaan dengan tetes terakhir kopiku. Aku sudah siap memeluk hiruk-pikuk Jakarta hari ini.</p>
+
+            </article>
+        </section>
+        <footer class="glass-footer" style="margin-top: 60px;">
+            <p>&copy; 2026 Rak Buku Cera | Dwi Margi Astuti x Rohman Firmandika</p>
+        </footer>
+    </main>
+    <!-- Toast Notification -->
+    <div id="toast">Link copied!</div>
+    <script>
+        feather.replace();
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.getElementById("toast");
+                toast.className = "show";
+                setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+            });
+        }
+
+        // Blobs Parallax
+        const blobWrapper = document.getElementById('blobWrapper');
+        window.addEventListener('scroll', () => {
+            if (blobWrapper && window.innerWidth > 768) {
+                const scrolled = window.scrollY;
+                blobWrapper.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+
+        // Mobile Menu
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinksContainer = document.querySelector('.nav-links');
+        if (menuBtn && navLinksContainer) {
+            menuBtn.addEventListener('click', () => {
+                navLinksContainer.classList.toggle('active');
+                if (navLinksContainer.classList.contains('active')) {
+                    menuBtn.innerHTML = '<i data-feather="x"></i>';
+                } else {
+                    menuBtn.innerHTML = '<i data-feather="menu"></i>';
+                }
+                feather.replace();
+            });
+        }
+
+        // Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal-stagger');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Magnetic Effect
+        if (window.matchMedia("(pointer: fine)").matches) {
+            const btns = document.querySelectorAll('.magnetic');
+            btns.forEach(btn => {
+                btn.addEventListener('mousemove', function (e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const deltaX = (x - centerX) * 0.1;
+                    const deltaY = (y - centerY) * 0.1;
+                    this.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+                });
+                btn.addEventListener('mouseleave', function () {
+                    this.style.transform = ``;
+                });
+            });
+        }
+    </script>
+</body>
+
+  </html>
