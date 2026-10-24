@@ -9,6 +9,14 @@
       "sinopsis": "Seperti malam-malam lain, aku pulang selepas lembur. Orang-orang di kantor yang sudah menikah, mereka akan pulang ke keluarganya masing-masing. Sementara aku yang tidak punya siapa-siapa ini, sekarang masih duduk sendirian di parkiran mobil yang sudah lengang, bersama sebotol bir, rokok murah, dan sepotong kue ulang tahunku sendiri yang kubeli dari toko manisan dekat kantor.\n\nAku takut kalau ternyata selama ini aku tidak pernah berhasil menjalani hidup seperti sebagaimana seharusnya. Di kepalaku sekarang, pertanyaan ini semakin lama semakin membesar. \"Pantaskah hidup ini kulanjutkan?\"\n\nAku berdiri menatap ke langit malam.\nKini tekadku sudah bulat.\nAku akan bunuh diri 24 jam dari sekarang."
     },
     {
+      "title": "Satine",
+      "author": "Ika Natassa",
+      "cover": "assets/books/satine.jpg",
+      "progress": 20.6,
+      "status": "Reading",
+      "sinopsis": "“I just need a proper date.” “Saya cuma butuh teman bicara.” Ada yang bilang hidup yang tertata sempurna ibarat makanan yang dikemas rapi. Semuanya tersusun pada tempatnya, cantik. Lalu, tanpa disangka terjadilah satu peristiwa, kemasan itu tersenggol, dan isinya berserakan di lantai. Hidup yang selama ini dikenal Satine runtuh saat ia menyadari dirinya tidak lebih dari sekadar perempuan kesepian.<br><br>Dalam kenekatan seseorang yang selalu bisa menyelesaikan apa pun dalam hidupnya, Satine menemukan solusi yang mempertemukannya dengan lelaki asing, Ash. Hubungan yang mereka mulai dengan keterikatan kontrak di atas kertas dan harus tunduk pada aturan, ternyata tunduk pada gejolak perasaan mereka sendiri. Lalu terjadilah peristiwa demi peristiwa yang menghadirkan pertanyaan: “Jika semua hal di muka bumi ini diatur oleh takdir, apakah pertemuan dan perpisahan juga harus takluk pada takdir?”<br><br>Profil Penulis:<br>Ika Natassa adalah bankir dengan pengalaman berkarier 22 tahun yang telah jatuh cinta pada menulis dan seni bercerita sejak kecil. Satine adalah novel kesebelasnya setelah A Very Yuppy Wedding (2007), Divortiare (2008), Antologi Rasa (2011), Twivortiare (2012), Twivortiare 2 (2014), Critical Eleven (2015), Underground (2016), Susah Sinyal (2018), The Architecture of Love (2016), dan Heartbreak Motel (2022). Hampir semua novelnya mencatatkan status best seller di Indonesia dan ia juga mulai menjajal penulisan skenario, dengan skenario tunggal pertamanya berupa miniseri berjudul Sementara, Selamanya yang banyak dipuji kritikus dan telah dirilis dalam bentuk buku di tahun 2020.<br>Lewat novel debutnya, Ika Natassa dinominasikan sebagai Penulis Muda Berbakat dalam penghargaan Khatulistiwa Literary Award pada 2008. Tahun 2015, dia ditunjuk menjadi salah satu delegasi Indonesia di Frankfurt Book Fair. Antologi Rasa, Twivortiare, Critical Eleven, The Architecture of Love, dan Heartbreak Motel telah diadaptasi menjadi film layar lebar. Ika juga dinominasikan dalam kategori Penulis Skenario Adaptasi Terbaik bersama Alim Sudio untuk film The Architecture of Love di Festival Film Indonesia 2024."
+    },
+    {
       "title": "Namaku Alam",
       "author": "Leila S. Chudori",
       "cover": "assets/books/namaku-alam.jpeg",
@@ -58,6 +66,24 @@
     }
   ],
   "readingList": [
+    {
+      "title": "Satine",
+      "author": "Ika Natassa",
+      "cover": "assets/books/satine.jpg",
+      "status": "Reading",
+      "progress": 20.6,
+      "sinopsis": "“I just need a proper date.” “Saya cuma butuh teman bicara.” Ada yang bilang hidup yang tertata sempurna ibarat makanan yang dikemas rapi. Semuanya tersusun pada tempatnya, cantik. Lalu, tanpa disangka terjadilah satu peristiwa, kemasan itu tersenggol, dan isinya berserakan di lantai. Hidup yang selama ini dikenal Satine runtuh saat ia menyadari dirinya tidak lebih dari sekadar perempuan kesepian.<br><br>Dalam kenekatan seseorang yang selalu bisa menyelesaikan apa pun dalam hidupnya, Satine menemukan solusi yang mempertemukannya dengan lelaki asing, Ash. Hubungan yang mereka mulai dengan keterikatan kontrak di atas kertas dan harus tunduk pada aturan, ternyata tunduk pada gejolak perasaan mereka sendiri. Lalu terjadilah peristiwa demi peristiwa yang menghadirkan pertanyaan: “Jika semua hal di muka bumi ini diatur oleh takdir, apakah pertemuan dan perpisahan juga harus takluk pada takdir?”<br><br>Profil Penulis:<br>Ika Natassa adalah bankir dengan pengalaman berkarier 22 tahun yang telah jatuh cinta pada menulis dan seni bercerita sejak kecil. Satine adalah novel kesebelasnya setelah A Very Yuppy Wedding (2007), Divortiare (2008), Antologi Rasa (2011), Twivortiare (2012), Twivortiare 2 (2014), Critical Eleven (2015), Underground (2016), Susah Sinyal (2018), The Architecture of Love (2016), dan Heartbreak Motel (2022). Hampir semua novelnya mencatatkan status best seller di Indonesia dan ia juga mulai menjajal penulisan skenario, dengan skenario tunggal pertamanya berupa miniseri berjudul Sementara, Selamanya yang banyak dipuji kritikus dan telah dirilis dalam bentuk buku di tahun 2020.<br>Lewat novel debutnya, Ika Natassa dinominasikan sebagai Penulis Muda Berbakat dalam penghargaan Khatulistiwa Literary Award pada 2008. Tahun 2015, dia ditunjuk menjadi salah satu delegasi Indonesia di Frankfurt Book Fair. Antologi Rasa, Twivortiare, Critical Eleven, The Architecture of Love, dan Heartbreak Motel telah diadaptasi menjadi film layar lebar. Ika juga dinominasikan dalam kategori Penulis Skenario Adaptasi Terbaik bersama Alim Sudio untuk film The Architecture of Love di Festival Film Indonesia 2024.",
+      "reviews": {
+        "rohman": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        },
+        "margi": {
+          "rating": "0/0",
+          "comment": "belum komen"
+        }
+      }
+    },
     {
       "title": "Psychology of Money",
       "author": "Morgan Housel",
@@ -535,24 +561,6 @@
       "status": "Unread",
       "progress": 0,
       "sinopsis": "IQ atau Intelligence Quotient atau kecerdasan intelektual seringkali digunakan untuk mempertimbangkan keahlian dan kompetensi seseorang dalam suatu bidang. Muncul banyak stereotip bahwa individu dengan IQ tinggi akan lebih mudah untuk sukses. Namun nyatanya masih banyak individu ber-IQ tinggi tapi mengalami kegagalan.<br><br>Ternyata, dibalik kesuksesan individu ber-IQ tinggi ada kecerdasan emosional yang baik. Berarti individu ini memiliki kecerdasan emosional yang membuatnya mampu menyadarkan diri, mengendalikan dorongan hati, senantiasa tekun, selalu semangat dan memotivasi diri, hingga membangun kecakapan sosial. Individu dengan kecerdasan emosional yang baik cenderung akan menonjol karena kemampuannya berinteraksi dengan orang sekitar.<br><br>Buku Emotional Intelligence ini menjelaskan apa keuntungan memiliki kecerdasan emosional dan pengaruh bagi individu dengan kecerdasan emosional yang rendah. Dengan kecerdasan emosional yang senantiasa bisa dikembangkan, buku ini juga menghadirkan pedoman bagaimana membentuk kecerdasan emosional, utamanya pada anak-anak hingga bisa menghasilkan insan yang berakhlak dan berjiwa sosial nantinya.<br><br>Di dalam buku ini kita juga bisa mengetahui, hal-hal seperti:<br>Bagaimana emosi bisa “membajak” otak rasional kita;<br>apa saja keahlian utama untuk meningkatkan kecerdasan emosional;<br>bagaimana cara mengendalikan diri saat dilanda amarah besar;<br>apa yang dimaksud dengan “cerdas sosial”; dan<br>seperti apa gaya mendidik anak yang tidak tepat secara emosional.",
-      "reviews": {
-        "rohman": {
-          "rating": "0/0",
-          "comment": "belum komen"
-        },
-        "margi": {
-          "rating": "0/0",
-          "comment": "belum komen"
-        }
-      }
-    },
-    {
-      "title": "Satine",
-      "author": "Ika Natassa",
-      "cover": "assets/books/satine.jpg",
-      "status": "Unread",
-      "progress": 0,
-      "sinopsis": "“I just need a proper date.” “Saya cuma butuh teman bicara.” Ada yang bilang hidup yang tertata sempurna ibarat makanan yang dikemas rapi. Semuanya tersusun pada tempatnya, cantik. Lalu, tanpa disangka terjadilah satu peristiwa, kemasan itu tersenggol, dan isinya berserakan di lantai. Hidup yang selama ini dikenal Satine runtuh saat ia menyadari dirinya tidak lebih dari sekadar perempuan kesepian.<br><br>Dalam kenekatan seseorang yang selalu bisa menyelesaikan apa pun dalam hidupnya, Satine menemukan solusi yang mempertemukannya dengan lelaki asing, Ash. Hubungan yang mereka mulai dengan keterikatan kontrak di atas kertas dan harus tunduk pada aturan, ternyata tunduk pada gejolak perasaan mereka sendiri. Lalu terjadilah peristiwa demi peristiwa yang menghadirkan pertanyaan: “Jika semua hal di muka bumi ini diatur oleh takdir, apakah pertemuan dan perpisahan juga harus takluk pada takdir?”<br><br>Profil Penulis:<br>Ika Natassa adalah bankir dengan pengalaman berkarier 22 tahun yang telah jatuh cinta pada menulis dan seni bercerita sejak kecil. Satine adalah novel kesebelasnya setelah A Very Yuppy Wedding (2007), Divortiare (2008), Antologi Rasa (2011), Twivortiare (2012), Twivortiare 2 (2014), Critical Eleven (2015), Underground (2016), Susah Sinyal (2018), The Architecture of Love (2016), dan Heartbreak Motel (2022). Hampir semua novelnya mencatatkan status best seller di Indonesia dan ia juga mulai menjajal penulisan skenario, dengan skenario tunggal pertamanya berupa miniseri berjudul Sementara, Selamanya yang banyak dipuji kritikus dan telah dirilis dalam bentuk buku di tahun 2020.<br>Lewat novel debutnya, Ika Natassa dinominasikan sebagai Penulis Muda Berbakat dalam penghargaan Khatulistiwa Literary Award pada 2008. Tahun 2015, dia ditunjuk menjadi salah satu delegasi Indonesia di Frankfurt Book Fair. Antologi Rasa, Twivortiare, Critical Eleven, The Architecture of Love, dan Heartbreak Motel telah diadaptasi menjadi film layar lebar. Ika juga dinominasikan dalam kategori Penulis Skenario Adaptasi Terbaik bersama Alim Sudio untuk film The Architecture of Love di Festival Film Indonesia 2024.",
       "reviews": {
         "rohman": {
           "rating": "0/0",
